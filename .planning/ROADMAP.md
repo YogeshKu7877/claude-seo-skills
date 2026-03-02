@@ -29,11 +29,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Invoking a command that requires an unavailable MCP returns a human-readable error message with a fallback suggestion rather than silent failure or hallucinated data
   4. The YAML validation script catches a malformed frontmatter file and exits non-zero before any skill is deployed
   5. Ahrefs monetary values in any output always show dollars (e.g., "$1,250") not raw cents (e.g., "125000")
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 01-01: Install script, directory structure, YAML validation pre-commit hook, and MCP user-scope registration verification
-- [ ] 01-02: Orchestrator `seo/SKILL.md` with 27-command routing table, shared reference files (CWV thresholds, E-E-A-T, schema types, Ahrefs API reference, GSC API reference), Python helper scripts, and graceful degradation pattern
+- [ ] 01-01-PLAN.md — Install script, source repo layout, YAML validation, Python venv setup, MCP scope verification (Wave 1)
+- [ ] 01-02-PLAN.md — Orchestrator 27-command routing table, shared reference files (mcp-degradation, Ahrefs API, GSC API), graceful degradation pattern (Wave 2)
 
 ### Phase 2: Core Live Data
 **Goal**: Users can query real GSC performance data and live Ahrefs data through 19 commands, and can audit markdown files locally — these are the commands that replace estimated data with actual data
