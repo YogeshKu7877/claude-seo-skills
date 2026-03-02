@@ -18,18 +18,18 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Original Commands (Enhanced)
 
-- [ ] **ORIG-01**: `/seo audit <url>` — Full website audit with parallel subagent delegation, health score 0-100
-- [ ] **ORIG-02**: `/seo page <url>` — Deep single-page analysis (on-page, content, technical, schema, images)
-- [ ] **ORIG-03**: `/seo technical <url>` — Technical SEO audit across 8 categories
-- [ ] **ORIG-04**: `/seo content <url>` — E-E-A-T and content quality analysis with AI citation readiness
-- [ ] **ORIG-05**: `/seo schema <url>` — Schema.org detection, validation, and JSON-LD generation
-- [ ] **ORIG-06**: `/seo images <url>` — Image optimization analysis (alt text, formats, lazy loading, CLS)
-- [ ] **ORIG-07**: `/seo sitemap <url or generate>` — XML sitemap analysis or generation with industry templates
-- [ ] **ORIG-08**: `/seo geo <url>` — Generative Engine Optimization for AI Overviews, ChatGPT, Perplexity
-- [ ] **ORIG-09**: `/seo plan <business-type>` — Strategic SEO planning with 6 industry templates
-- [ ] **ORIG-10**: `/seo programmatic <url>` — Programmatic SEO analysis with thin content gates
-- [ ] **ORIG-11**: `/seo competitor-pages <url or generate>` — X vs Y comparison page generation
-- [ ] **ORIG-12**: `/seo hreflang <url>` — Hreflang/i18n SEO audit and generation
+- [x] **ORIG-01**: `/seo audit <url>` — Full website audit with parallel subagent delegation, health score 0-100
+- [x] **ORIG-02**: `/seo page <url>` — Deep single-page analysis (on-page, content, technical, schema, images)
+- [x] **ORIG-03**: `/seo technical <url>` — Technical SEO audit across 8 categories
+- [x] **ORIG-04**: `/seo content <url>` — E-E-A-T and content quality analysis with AI citation readiness
+- [x] **ORIG-05**: `/seo schema <url>` — Schema.org detection, validation, and JSON-LD generation
+- [x] **ORIG-06**: `/seo images <url>` — Image optimization analysis (alt text, formats, lazy loading, CLS)
+- [x] **ORIG-07**: `/seo sitemap <url or generate>` — XML sitemap analysis or generation with industry templates
+- [x] **ORIG-08**: `/seo geo <url>` — Generative Engine Optimization for AI Overviews, ChatGPT, Perplexity
+- [x] **ORIG-09**: `/seo plan <business-type>` — Strategic SEO planning with 6 industry templates
+- [x] **ORIG-10**: `/seo programmatic <url>` — Programmatic SEO analysis with thin content gates
+- [x] **ORIG-11**: `/seo competitor-pages <url or generate>` — X vs Y comparison page generation
+- [x] **ORIG-12**: `/seo hreflang <url>` — Hreflang/i18n SEO audit and generation
 
 ### GSC Commands (New)
 
@@ -147,18 +147,18 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CROSS-03 | Phase 3 | Complete |
 | CROSS-04 | Phase 3 | Complete |
 | CROSS-05 | Phase 3 | Complete |
-| ORIG-01 | Phase 4 | Pending |
-| ORIG-02 | Phase 4 | Pending |
-| ORIG-03 | Phase 4 | Pending |
-| ORIG-04 | Phase 4 | Pending |
-| ORIG-05 | Phase 4 | Pending |
-| ORIG-06 | Phase 4 | Pending |
-| ORIG-07 | Phase 4 | Pending |
-| ORIG-08 | Phase 4 | Pending |
-| ORIG-09 | Phase 4 | Pending |
-| ORIG-10 | Phase 4 | Pending |
-| ORIG-11 | Phase 4 | Pending |
-| ORIG-12 | Phase 4 | Pending |
+| ORIG-01 | Phase 4 | Complete |
+| ORIG-02 | Phase 4 | Complete |
+| ORIG-03 | Phase 4 | Complete |
+| ORIG-04 | Phase 4 | Complete |
+| ORIG-05 | Phase 4 | Complete |
+| ORIG-06 | Phase 4 | Complete |
+| ORIG-07 | Phase 4 | Complete |
+| ORIG-08 | Phase 4 | Complete |
+| ORIG-09 | Phase 4 | Complete |
+| ORIG-10 | Phase 4 | Complete |
+| ORIG-11 | Phase 4 | Complete |
+| ORIG-12 | Phase 4 | Complete |
 | LOCAL-02 | Phase 4 | Pending |
 | LOCAL-03 | Phase 4 | Pending |
 | LOCAL-04 | Phase 4 | Pending |

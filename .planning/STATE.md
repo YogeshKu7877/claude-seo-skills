@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-02T10:11:44.482Z"
+last_updated: "2026-03-02T11:54:32.543Z"
 progress:
-  total_phases: 3
+  total_phases: 4
   completed_phases: 3
-  total_plans: 9
-  completed_plans: 9
+  total_plans: 12
+  completed_plans: 11
 ---
 
 # Project State
@@ -22,12 +22,12 @@ See: .planning/PROJECT.md (updated 2026-02-27)
 
 ## Current Position
 
-Phase: 3 of 4 (Cross-MCP Differentiating)
-Plan: 3 of 3 in current phase (Phase 3 complete — all tasks including human verification done)
-Status: Phase 3 complete — ready for Phase 4
-Last activity: 2026-03-02 — Plan 03-03 fully complete: seo-site-audit-pro created, all 37 commands active, human verification checkpoint approved
+Phase: 4 of 4 (Enhanced Originals & Local Analysis)
+Plan: 2 of 4 in current phase (04-02 complete — 8 original skills enhanced with selective MCP overlays and frontmatter refresh)
+Status: Phase 4 in progress — ready for Plan 04-03 (new local analysis commands)
+Last activity: 2026-03-02 — Plan 04-02 fully complete: schema/sitemap/geo overlays added, 5 skills frontmatter refreshed, markdown-audit enhanced with 11 checks
 
-Progress: [███████░░░] 70%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
@@ -51,6 +51,8 @@ Progress: [███████░░░] 70%
 | Phase 03-cross-mcp-differentiating P02 | 2 | 2 tasks | 2 files |
 | Phase 03-cross-mcp-differentiating P01 | 3 | 2 tasks | 3 files |
 | Phase 03-cross-mcp-differentiating P03 | 5 | 2 tasks | 2 files |
+| Phase 04-enhanced-originals-local-analysis P02 | 3 | 2 tasks | 9 files |
+| Phase 04-enhanced-originals-local-analysis P01 | 3min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -89,6 +91,13 @@ Recent decisions affecting current work:
 - [Phase 03-cross-mcp-differentiating]: seo-site-audit-pro uses sequential wave execution — no parallel tool calls, no subagents (GitHub Issue #6594 — cascade termination risk)
 - [Phase 03-cross-mcp-differentiating]: SKIPPED logging allows audit to continue past any individual tool failure — rate limits are non-fatal
 - [Phase 03-cross-mcp-differentiating]: All 37 routing table entries now active — Phase 3 deployment complete
+- [Phase 04-01]: Appended section approach: overlays added to end of SKILL.md files, static analysis sections never modified
+- [Phase 04-01]: google-seo-guide.md reference added to seo-audit Process step 0 for category-aligned audit checks
+- [04-02]: seo-schema gets Ahrefs overlay only (traffic prioritization) — no GSC overlay needed for schema analysis
+- [04-02]: seo-sitemap gets GSC overlay only (indexing cross-reference) — no Ahrefs overlay needed for sitemap analysis
+- [04-02]: seo-geo gets Ahrefs Brand Radar overlay specifically via '+ahrefs brand-radar' ToolSearch query — Brand Radar may require separate tier vs general Ahrefs access
+- [04-02]: plan, programmatic, hreflang, competitor-pages, images get no MCP overlays — live data does not meaningfully improve these analysis types per CONTEXT.md selective overlay decision
+- [04-02]: seo-markdown-audit check 11 Markdown Syntax Quality adds 5 rules from Markdown Guide — space after hash, consistent list delimiters, blank lines around headings/code blocks, ordered list starting at 1
 
 ### Pending Todos
 
@@ -104,5 +113,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-02
-Stopped at: Completed 03-03-PLAN.md all 3 tasks — human verification checkpoint approved, Phase 3 fully complete
+Stopped at: Completed 04-01-PLAN.md all 2 tasks — google-seo-guide.md and markdown-guide.md created, seo-audit/page/technical/content enhanced with MCP overlays (ORIG-01 through ORIG-04 complete)
 Resume file: None
