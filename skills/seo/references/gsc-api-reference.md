@@ -1,53 +1,49 @@
-<!-- Updated: 2026-03-02 -->
+<!-- Updated: 2026-03-02 — verified from GSC-MCP/src/index.ts source -->
 
 # GSC API Reference
 
 Tool name mapping, property formats, and response fields for Google Search Console
 MCP. Load this file on-demand when building or executing any GSC sub-skill.
 
-IMPORTANT: Many values in this file are marked TBD or UNVERIFIED. The GSC MCP
-tool names and property format must be discovered and verified in Phase 2 before
-any GSC commands can be built. Do not assume any placeholder values are correct.
-
-## GSC MCP Tool Mapping (to be verified in Phase 2)
+## GSC MCP Tool Mapping (Verified from Source)
 
 GSC MCP source: `/Users/aash-zsbch1500/Desktop/GSC-MCP`
-Tool name pattern: TBD — must be discovered when GSC commands are built.
+Tool name prefix: depends on alias used during registration in `~/.claude/mcp.json`.
+Use ToolSearch at runtime to discover the actual prefix — see MCP Availability Check below.
 
-Run `ToolSearch "+google-search-console"` to discover actual tool names before
-building any GSC sub-skill.
+Verified mapping (read from `/Users/aash-zsbch1500/Desktop/GSC-MCP/GSC-MCP/src/index.ts`):
 
-Placeholder mapping (DO NOT USE until verified):
+| Sub-command | GSC MCP Tool | Key Params | Verified |
+|-------------|-------------|-----------|----------|
+| `overview` | `query_search_analytics` (x2: query + page dimensions) | siteUrl, startDate, endDate, dimensions, rowLimit | Yes (source) |
+| `drops` | `compare_performance` | siteUrl, 4 date params, dimension=page | Yes (source) |
+| `opportunities` | `find_keyword_opportunities` | siteUrl, startDate, endDate, minImpressions, maxCtr, maxPosition | Yes (source) |
+| `cannibalization` | `query_search_analytics` | siteUrl, dates, dimensions=["query","page"] | Yes (source) |
+| `index-issues` | `inspect_url` (per URL, cap at 20) | siteUrl, inspectionUrl | Yes (source) |
+| `compare` | `compare_performance` | siteUrl, 4 date params, dimension | Yes (source) |
+| `brand-vs-nonbrand` | `analyze_brand_queries` | siteUrl, dates, brandTerms (user-provided) | Yes (source) |
+| `content-decay` | `compare_performance` | siteUrl, 90-day window, dimension=page | Yes (source) |
+| `new-keywords` | `compare_performance` | siteUrl, 28-day window, filter previousClicks=0 | Yes (source) |
 
-| Sub-command | Expected MCP Tool | Verified |
-|-------------|-------------------|----------|
-| `overview` | TBD | No |
-| `drops` | TBD | No |
-| `opportunities` | TBD | No |
-| `pages` | TBD | No |
-| `queries` | TBD | No |
-| `indexing` | TBD | No |
-| `cannibalization` | TBD | No |
-| `compare` | TBD | No |
-| `sitemaps` | TBD | No |
+## Additional GSC Tools Available
 
-**Phase 2 action:** When building the first GSC sub-skill, use ToolSearch to
-discover all available GSC MCP tools and update this table with verified names.
+These tools are available in the GSC MCP but not directly mapped to a single sub-command:
 
-## GSC Property Format — UNVERIFIED
+- `list_accounts` — no params, returns connected Google accounts
+- `list_sites` — optional `account`, returns properties for account
+- `get_top_pages` — siteUrl, startDate, endDate, sortBy, limit — used within overview
+- `get_keyword_trend` — siteUrl, keyword, startDate, endDate — for keyword-specific drilldown
+- `export_analytics` — siteUrl, startDate, endDate, dimensions, format — data export
 
-The GSC MCP property format has NOT been verified against the actual MCP server.
-Possible formats accepted by the GSC MCP:
+## GSC Property Format — VERIFIED (from source)
+
+Both property formats are accepted by the GSC MCP server:
   - `"sc-domain:example.com"` (domain property — covers all subdomains and protocols)
   - `"https://example.com"` (URL prefix property — covers exact URL prefix only)
 
-MUST be tested before building GSC commands in Phase 2.
-See STATE.md blocker: "GSC MCP property format unverified"
+Source: verified from `/Users/aash-zsbch1500/Desktop/GSC-MCP/GSC-MCP/src/index.ts`
 
-**Phase 2 action:** Test both property formats against a known verified GSC
-property before writing any sub-skill that accepts user-provided site URLs.
-
-**User-facing guidance (once format is confirmed):**
+**User-facing guidance:**
 When asking the user for their site, clarify which property type they added to
 GSC and accept both formats gracefully:
   - Domain property: `sc-domain:example.com`
@@ -78,20 +74,15 @@ specification and may differ in the MCP wrapper.
 - `last_crawled` — Date of last crawl (ISO 8601)
 - `indexing_state` — Whether the page is indexed
 
-### Sitemaps
-- `path` — Sitemap URL
-- `last_submitted` — Date last submitted (ISO 8601)
-- `last_downloaded` — Date last downloaded by Google (ISO 8601)
-- `warnings` — Warning count
-- `errors` — Error count
-- `contents` — Breakdown by content type (URL count, indexed count)
+## CTR Display Rule
 
-## CTR Display Convention
-
-GSC returns CTR as a decimal (0.0523 = 5.23%).
+`query_search_analytics` returns CTR as a decimal (0.0523 = 5.23%).
 When displaying CTR to users, always multiply by 100 and append `%`:
   - API returns: `ctr = 0.0523`
   - Display as: `5.23%`
+
+Note: The GSC MCP's formatted output may convert this automatically, but raw API
+responses do not. Always apply this conversion when rendering CTR values.
 
 ## Date Range Conventions
 
@@ -107,9 +98,15 @@ Common date ranges used across GSC sub-commands:
 Before calling any GSC tool, verify the MCP is connected:
 ```
 Use ToolSearch with query "+google-search-console"
-- Tools returned → proceed (use discovered tool names, not placeholders above)
+- Tools returned → proceed (use discovered tool names with actual prefix, not bare names above)
 - No tools → use GSC error template in references/mcp-degradation.md
 ```
+
+The GSC MCP server is registered as `gsc-mcp-server` in its package.json. The tool
+name prefix depends on the alias used during registration in `~/.claude/mcp.json`.
+Use ToolSearch to discover the actual prefix at runtime. Example patterns:
+  - `mcp__gsc-mcp-server__query_search_analytics`
+  - `mcp__google-search-console__query_search_analytics`
 
 If no GSC tools found, also check if GSC MCP needs registration:
 ```
@@ -120,12 +117,9 @@ cat ~/.claude/mcp.json | grep -i "google\|gsc"
 
 ## Phase 2 Discovery Checklist
 
-Before building any GSC sub-skill, complete these verification steps:
-
-- [ ] Run ToolSearch and document all available GSC MCP tool names
-- [ ] Test property format: try `sc-domain:example.com` vs `https://example.com`
-- [ ] Verify response field names match expected fields above
-- [ ] Test date range parameter format (string vs object vs epoch)
-- [ ] Confirm row limit and pagination behavior
-- [ ] Update this file with verified tool names and field names
-- [ ] Remove TBD placeholders from the tool mapping table above
+- [x] Run ToolSearch and document all available GSC MCP tool names (verified from source)
+- [x] Property format: both `sc-domain:example.com` and `https://example.com` accepted (verified from source)
+- [ ] Verify response field names match expected fields above (need live testing)
+- [ ] Test date range parameter format (string vs object vs epoch) (need live testing)
+- [ ] Confirm row limit and pagination behavior (need live testing)
+- [ ] Discover registered MCP alias (need runtime ToolSearch)
