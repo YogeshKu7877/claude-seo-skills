@@ -50,12 +50,12 @@ e-commerce, publishers, agencies). Orchestrates 27 specialized sub-skills
 | `/seo gsc overview <site>` | GSC performance overview (clicks, impressions, CTR, position) | Phase 2 |
 | `/seo gsc drops <site>` | Detect keyword/page ranking drops | Phase 2 |
 | `/seo gsc opportunities <site>` | Find high-impression, low-CTR opportunities | Phase 2 |
-| `/seo gsc pages <site>` | Top performing pages by clicks | Phase 2 |
-| `/seo gsc queries <site>` | Top performing queries and brand vs non-brand split | Phase 2 |
-| `/seo gsc indexing <site>` | Indexing coverage report | Phase 2 |
+| `/seo gsc brand-vs-nonbrand <site>` | Brand vs non-brand traffic split analysis | Phase 2 |
 | `/seo gsc cannibalization <site>` | Detect keyword cannibalization | Phase 2 |
 | `/seo gsc compare <site>` | Period-over-period comparison (MoM, YoY) | Phase 2 |
-| `/seo gsc sitemaps <site>` | Sitemap submission and coverage status | Phase 2 |
+| `/seo gsc content-decay <site>` | Pages losing rankings over 90 days | Phase 2 |
+| `/seo gsc index-issues <site>` | Pages not indexed with reasons | Phase 2 |
+| `/seo gsc new-keywords <site>` | Keywords started ranking for recently | Phase 2 |
 | `/seo ahrefs overview <domain>` | Domain authority, traffic, and top metrics | Phase 2 |
 | `/seo ahrefs backlinks <domain>` | Backlink profile analysis | Phase 2 |
 | `/seo ahrefs keywords <domain>` | Organic keyword rankings | Phase 2 |
@@ -109,12 +109,12 @@ For grouped commands, extract the sub-command and route to the specific sub-skil
 - `/seo gsc overview <site>` → load `seo-gsc-overview/SKILL.md`
 - `/seo gsc drops <site>` → load `seo-gsc-drops/SKILL.md`
 - `/seo gsc opportunities <site>` → load `seo-gsc-opportunities/SKILL.md`
-- `/seo gsc pages <site>` → load `seo-gsc-pages/SKILL.md`
-- `/seo gsc queries <site>` → load `seo-gsc-queries/SKILL.md`
-- `/seo gsc indexing <site>` → load `seo-gsc-indexing/SKILL.md`
+- `/seo gsc brand-vs-nonbrand <site>` → load `seo-gsc-brand-vs-nonbrand/SKILL.md`
 - `/seo gsc cannibalization <site>` → load `seo-gsc-cannibalization/SKILL.md`
 - `/seo gsc compare <site>` → load `seo-gsc-compare/SKILL.md`
-- `/seo gsc sitemaps <site>` → load `seo-gsc-sitemaps/SKILL.md`
+- `/seo gsc content-decay <site>` → load `seo-gsc-content-decay/SKILL.md`
+- `/seo gsc index-issues <site>` → load `seo-gsc-indexing/SKILL.md`
+- `/seo gsc new-keywords <site>` → load `seo-gsc-new-keywords/SKILL.md`
 
 **Ahrefs sub-commands** (all require Ahrefs MCP — see `references/mcp-degradation.md`):
 - `/seo ahrefs overview <domain>` → load `seo-ahrefs-overview/SKILL.md`
@@ -149,12 +149,12 @@ Full mapping of all 27 commands to sub-skill directory names:
 | `/seo gsc overview` | `seo-gsc-overview/` | Phase 2 |
 | `/seo gsc drops` | `seo-gsc-drops/` | Phase 2 |
 | `/seo gsc opportunities` | `seo-gsc-opportunities/` | Phase 2 |
-| `/seo gsc pages` | `seo-gsc-pages/` | Phase 2 |
-| `/seo gsc queries` | `seo-gsc-queries/` | Phase 2 |
-| `/seo gsc indexing` | `seo-gsc-indexing/` | Phase 2 |
+| `/seo gsc brand-vs-nonbrand` | `seo-gsc-brand-vs-nonbrand/` | Phase 2 |
 | `/seo gsc cannibalization` | `seo-gsc-cannibalization/` | Phase 2 |
 | `/seo gsc compare` | `seo-gsc-compare/` | Phase 2 |
-| `/seo gsc sitemaps` | `seo-gsc-sitemaps/` | Phase 2 |
+| `/seo gsc content-decay` | `seo-gsc-content-decay/` | Phase 2 |
+| `/seo gsc index-issues` | `seo-gsc-indexing/` | Phase 2 |
+| `/seo gsc new-keywords` | `seo-gsc-new-keywords/` | Phase 2 |
 | `/seo ahrefs overview` | `seo-ahrefs-overview/` | Phase 2 |
 | `/seo ahrefs backlinks` | `seo-ahrefs-backlinks/` | Phase 2 |
 | `/seo ahrefs keywords` | `seo-ahrefs-keywords/` | Phase 2 |
@@ -261,12 +261,12 @@ This skill orchestrates 27 specialized sub-skills (12 active, 15 planned):
 13. **seo-gsc-overview** — GSC performance dashboard
 14. **seo-gsc-drops** — Ranking drop detection
 15. **seo-gsc-opportunities** — High-impression, low-CTR opportunity finder
-16. **seo-gsc-pages** — Top pages by clicks
-17. **seo-gsc-queries** — Top queries with brand/non-brand split
-18. **seo-gsc-indexing** — Indexing coverage report
-19. **seo-gsc-cannibalization** — Keyword cannibalization detection
-20. **seo-gsc-compare** — Period-over-period comparison
-21. **seo-gsc-sitemaps** — Sitemap submission and coverage
+16. **seo-gsc-brand-vs-nonbrand** — Brand vs non-brand traffic split analysis
+17. **seo-gsc-cannibalization** — Keyword cannibalization detection
+18. **seo-gsc-compare** — Period-over-period comparison
+19. **seo-gsc-content-decay** — Pages losing rankings over 90 days
+20. **seo-gsc-indexing** — Pages not indexed with reasons
+21. **seo-gsc-new-keywords** — Keywords started ranking for recently
 
 **Phase 2 (Ahrefs MCP):**
 22. **seo-ahrefs-overview** — Domain authority and top metrics
