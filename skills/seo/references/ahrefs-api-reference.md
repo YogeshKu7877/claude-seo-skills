@@ -41,9 +41,10 @@ Each `/seo ahrefs` sub-command maps to one or more MCP tools:
 | `anchor-analysis` | `mcp__claude_ai_ahrefs__site-explorer-anchors` |
 | `dr-history` | `mcp__claude_ai_ahrefs__site-explorer-domain-rating-history` |
 | `top-pages` | `mcp__claude_ai_ahrefs__site-explorer-top-pages` |
+| `serp` | `mcp__claude_ai_ahrefs__serp-overview` |
+| `brand-radar` | `mcp__claude_ai_ahrefs__brand-radar-mentions-overview`, `mcp__claude_ai_ahrefs__brand-radar-sov-overview`, `mcp__claude_ai_ahrefs__brand-radar-ai-responses`, `mcp__claude_ai_ahrefs__brand-radar-cited-domains` |
 
-Additional Ahrefs tools available (for Phase 3 commands):
-- `mcp__claude_ai_ahrefs__brand-radar-mentions-overview` — used by `/seo brand-radar`
+Phase 3 tools (now active — integrated into seo-serp and seo-brand-radar sub-skills):
 
 ## Common Response Fields
 
