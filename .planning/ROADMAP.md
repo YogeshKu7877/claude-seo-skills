@@ -80,12 +80,12 @@ Plans:
   3. `/seo log-analysis <file>` reads a local server log file and returns a crawl budget breakdown (bot vs user traffic, crawl frequency by path, top crawled URLs) with no external calls
   4. `/seo migration-check <old> <new>` validates redirect chains, canonical consistency, and metadata preservation between old and new URLs using live fetch data — the command produces a pass/fail summary per URL
   5. `/seo internal-links <domain>` identifies orphan pages (no internal links pointing to them) and suggests specific anchor text for at least the top 5 underlinked pages
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 04-01: Enhanced originals — `seo-audit`, `seo-page`, `seo-technical`, `seo-content` with Ahrefs/GSC data overlays appended to existing static analysis output
-- [ ] 04-02: Enhanced originals — `seo-schema`, `seo-images`, `seo-sitemap`, `seo-geo`, `seo-plan`, `seo-programmatic`, `seo-competitor-pages`, `seo-hreflang` with MCP overlays where applicable
-- [ ] 04-03: Local analysis commands — `seo/log-analysis/SKILL.md`, `seo/ai-content-check/SKILL.md`, `seo/internal-links/SKILL.md`, `seo/local/SKILL.md`, `seo/migration-check/SKILL.md`
+- [ ] 04-01-PLAN.md — Reference files (Google SEO Guide, Markdown Guide) + enhance seo-audit, seo-page, seo-technical, seo-content with MCP overlays (Wave 1)
+- [ ] 04-02-PLAN.md — Selective MCP overlays for schema/sitemap/geo, frontmatter refresh for remaining originals, markdown-audit Markdown Guide rules (Wave 1, parallel with 04-01)
+- [ ] 04-03-PLAN.md — 5 new local analysis sub-skills, routing table update to 42 commands, install.sh fix, smoke test, human verification (Wave 2)
 
 ## Progress
 
