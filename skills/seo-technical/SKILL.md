@@ -3,8 +3,16 @@ name: seo-technical
 description: >
   Technical SEO audit across 8 categories: crawlability, indexability, security,
   URL structure, mobile, Core Web Vitals, structured data, and JavaScript
-  rendering. Use when user says "technical SEO", "crawl issues", "robots.txt",
-  "Core Web Vitals", "site speed", or "security headers".
+  rendering. Enhanced with live GSC (indexing status, crawl data) and Ahrefs
+  (backlink profile) data when MCPs are available. Use when user says "technical
+  SEO", "crawl issues", "robots.txt", "Core Web Vitals", "site speed", or
+  "security headers".
+allowed-tools:
+  - Read
+  - Bash
+  - Glob
+  - WebFetch
+  - ToolSearch
 ---
 
 # Technical SEO Audit
@@ -146,3 +154,72 @@ Google updated its JavaScript SEO documentation in December 2025 with critical c
 ### High Priority (fix within 1 week)
 ### Medium Priority (fix within 1 month)
 ### Low Priority (backlog)
+
+---
+
+## Live Data Insights (MCP Overlay)
+
+> This section appears only when MCP data sources are available. The static analysis above is complete and unchanged regardless of MCP availability.
+
+### MCP Availability Check
+
+Follow the self-contained check pattern from `seo/references/mcp-degradation.md`:
+1. Use ToolSearch with query "+google-search-console" — if tools returned, GSC is available
+2. Use ToolSearch with query "+ahrefs" — if tools returned, Ahrefs is available
+3. Proceed with whichever MCPs are available; skip sections for unavailable MCPs
+
+See `seo/references/gsc-api-reference.md` for GSC tool call details and property format.
+
+### Live Indexing Status (GSC)
+
+If GSC available: fetch `inspect_url` for the target URL to get live indexing data. Add a `### Live Indexing Status (GSC)` section:
+
+```
+### Live Indexing Status (Google Search Console)
+
+| Field | Value |
+|-------|-------|
+| Indexing Status | Indexed / Not Indexed |
+| Last Crawled | YYYY-MM-DD |
+| Crawled As | Desktop / Mobile |
+| Canonical (Google-selected) | https://example.com/page |
+| Canonical (User-declared) | https://example.com/page |
+| Mobile Usability | Usable / Issues found |
+| Verdict | PASS / FAIL |
+```
+
+If the URL is not indexed, show the specific reason returned by GSC (e.g., "Page with redirect", "Excluded by 'noindex' tag", "Crawled - currently not indexed", etc.).
+
+If GSC is unavailable, note: *"GSC data unavailable — live indexing status requires Google Search Console MCP."*
+
+### Backlink Profile Summary (Ahrefs)
+
+If Ahrefs available: fetch `site-explorer-backlinks-stats` (or `site-explorer-metrics`) for the domain. Add a `### Backlink Profile Summary` section — useful for technical context (e.g., a new site with few referring domains may explain slow Googlebot crawl frequency):
+
+```
+### Backlink Profile Summary (Ahrefs)
+
+| Metric | Value |
+|--------|-------|
+| Domain Rating (DR) | XX/100 |
+| Total Backlinks | XX,XXX |
+| Referring Domains | X,XXX |
+| Dofollow Referring Domains | X,XXX |
+| Dofollow Ratio | XX% |
+
+> Context: Sites with low DR (<20) and few referring domains often experience slower Googlebot crawl rates and may see delays in indexing new content.
+```
+
+**Note:** All monetary values from Ahrefs are in cents — divide by 100 before displaying as USD.
+
+---
+
+## Data Sources
+
+Always append this footer to the technical audit output:
+
+| Source | Status | Data Provided |
+|--------|--------|---------------|
+| Static Analysis | Always available | robots.txt, sitemap, canonicals, security headers, mobile, CWV signals, JS rendering |
+| GSC MCP | Available / Not connected | Live indexing status, crawl date, canonical selection, mobile usability |
+| Ahrefs MCP | Available / Not connected | Total backlinks, referring domains, dofollow ratio, DR for crawl context |

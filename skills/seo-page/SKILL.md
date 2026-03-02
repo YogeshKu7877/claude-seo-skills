@@ -2,8 +2,16 @@
 name: seo-page
 description: >
   Deep single-page SEO analysis covering on-page elements, content quality,
-  technical meta tags, schema, images, and performance. Use when user says
-  "analyze this page", "check page SEO", or provides a single URL for review.
+  technical meta tags, schema, images, and performance. Enhanced with live
+  Ahrefs (page authority, referring domains) and GSC (search performance,
+  top keywords) data when MCPs are available. Use when user says "analyze
+  this page", "check page SEO", or provides a single URL for review.
+allowed-tools:
+  - Read
+  - Bash
+  - Glob
+  - WebFetch
+  - ToolSearch
 ---
 
 # Single Page Analysis
@@ -72,3 +80,69 @@ Specific, actionable improvements with expected impact
 
 ### Schema Suggestions
 Ready-to-use JSON-LD code for detected opportunities
+
+---
+
+## Live Data Insights (MCP Overlay)
+
+> This section appears only when MCP data sources are available. The static analysis above is complete and unchanged regardless of MCP availability.
+
+### MCP Availability Check
+
+Follow the self-contained check pattern from `seo/references/mcp-degradation.md`:
+1. Use ToolSearch with query "+ahrefs" — if tools returned, Ahrefs is available
+2. Use ToolSearch with query "+google-search-console" — if tools returned, GSC is available
+3. Proceed with whichever MCPs are available; skip sections for unavailable MCPs
+
+### Page Authority Data (Ahrefs)
+
+If Ahrefs available: fetch page-level metrics via `site-explorer-metrics` for the specific URL (full URL with https://). Add a `### Page Authority Data` section:
+
+```
+### Page Authority Data (Ahrefs)
+
+| Metric | Value |
+|--------|-------|
+| Referring Domains | XXX |
+| Total Backlinks | X,XXX |
+| Organic Keywords (this page) | XXX |
+| Est. Monthly Traffic (this page) | XXX visits |
+```
+
+**Note:** All monetary values (`traffic_cost`, `cpc`) from Ahrefs are in cents — divide by 100 before displaying as USD.
+
+### Search Performance — GSC (Last 28 Days)
+
+If GSC available: fetch `get_search_analytics` filtered to this specific URL for the last 28 days. Add a `### Search Performance (GSC)` section:
+
+```
+### Search Performance (Google Search Console — Last 28 Days)
+
+| Metric | Value |
+|--------|-------|
+| Total Clicks | X,XXX |
+| Total Impressions | XX,XXX |
+| Click-Through Rate | X.X% |
+| Average Position | X.X |
+
+**Top 10 Keywords Driving Traffic to This Page:**
+
+| Keyword | Clicks | Impressions | CTR | Avg Position |
+|---------|--------|-------------|-----|--------------|
+| keyword 1 | XXX | X,XXX | X.X% | X.X |
+| ... | ... | ... | ... | ... |
+
+> CTR displayed as percentage (API returns decimal — multiply by 100 for display).
+```
+
+---
+
+## Data Sources
+
+Always append this footer to the page analysis output:
+
+| Source | Status | Data Provided |
+|--------|--------|---------------|
+| Static Analysis | Always available | On-page elements, content quality, technical tags, schema, images, CWV signals |
+| Ahrefs MCP | Available / Not connected | Referring domains, backlinks, organic keywords, page-level traffic |
+| GSC MCP | Available / Not connected | Clicks, impressions, CTR, avg position, top keywords for this page |

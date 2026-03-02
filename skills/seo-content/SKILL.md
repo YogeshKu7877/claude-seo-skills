@@ -2,8 +2,16 @@
 name: seo-content
 description: >
   Content quality and E-E-A-T analysis with AI citation readiness assessment.
-  Use when user says "content quality", "E-E-A-T", "content analysis",
+  Enhanced with live Ahrefs (actual keyword rankings, positions) and GSC (search
+  query performance) data to validate static E-E-A-T analysis with real user
+  behavior. Use when user says "content quality", "E-E-A-T", "content analysis",
   "readability check", "thin content", or "content audit".
+allowed-tools:
+  - Read
+  - Bash
+  - Glob
+  - WebFetch
+  - ToolSearch
 ---
 
 # Content Quality & E-E-A-T Analysis
@@ -155,3 +163,73 @@ GEO is the emerging discipline of optimizing content specifically for AI-generat
 
 ### Issues Found
 ### Recommendations
+
+---
+
+## Live Data Insights (MCP Overlay)
+
+> This section appears only when MCP data sources are available. The static analysis above is complete and unchanged regardless of MCP availability.
+
+### MCP Availability Check
+
+Follow the self-contained check pattern from `seo/references/mcp-degradation.md`:
+1. Use ToolSearch with query "+ahrefs" — if tools returned, Ahrefs is available
+2. Use ToolSearch with query "+google-search-console" — if tools returned, GSC is available
+3. Proceed with whichever MCPs are available; skip sections for unavailable MCPs
+
+### Actual Keyword Rankings (Ahrefs)
+
+If Ahrefs available: fetch `site-explorer-organic-keywords` filtered to the specific URL being analyzed (full URL with https://). Show what Google actually associates with this content — this complements the static keyword analysis by replacing estimation with real ranking data. Add a `### Actual Keyword Rankings (Ahrefs)` section:
+
+```
+### Actual Keyword Rankings (Ahrefs)
+
+Top 10 keywords this page actually ranks for:
+
+| Keyword | Position | Monthly Volume | Est. Traffic | Traffic % |
+|---------|----------|----------------|--------------|-----------|
+| keyword 1 | #X | X,XXX | XXX | X.X% |
+| keyword 2 | #XX | X,XXX | XXX | X.X% |
+| ... | ... | ... | ... | ... |
+
+> Position data reflects current Google rankings. Compare with static keyword analysis above to identify gaps between targeted vs. actual ranking keywords.
+```
+
+**Note:** `cpc` values from Ahrefs are in cents — divide by 100 before displaying as USD.
+
+### Search Query Performance (GSC)
+
+If GSC available: fetch `get_search_analytics` filtered to this specific URL for the last 28 days. Add a `### Search Query Performance (GSC)` section to validate E-E-A-T signals with real user behavior data:
+
+```
+### Search Query Performance (Google Search Console — Last 28 Days)
+
+| Metric | Value |
+|--------|-------|
+| Total Impressions | XX,XXX |
+| Total Clicks | X,XXX |
+| Overall CTR | X.X% |
+| Average Position | X.X |
+
+**Top Queries Triggering This Page:**
+
+| Query | Impressions | Clicks | CTR | Avg Position |
+|-------|-------------|--------|-----|--------------|
+| query 1 | X,XXX | XXX | X.X% | X.X |
+| ... | ... | ... | ... | ... |
+
+> High impressions with low CTR on relevant queries suggests title/meta description optimization is needed.
+> CTR displayed as percentage (API returns decimal — multiply by 100 for display).
+```
+
+---
+
+## Data Sources
+
+Always append this footer to the content analysis output:
+
+| Source | Status | Data Provided |
+|--------|--------|---------------|
+| Static Analysis | Always available | E-E-A-T scoring, readability, keyword density, structure, AI citation readiness |
+| Ahrefs MCP | Available / Not connected | Actual ranking keywords, positions, search volumes, traffic estimates |
+| GSC MCP | Available / Not connected | Impressions, clicks, CTR, avg position, top queries for this page |
