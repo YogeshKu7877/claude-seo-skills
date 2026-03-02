@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-27)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 0 of 2 in current phase
-Status: Ready to plan
-Last activity: 2026-03-02 — Roadmap created, all 48 v1 requirements mapped to 4 phases
+Plan: 1 of 2 in current phase
+Status: In progress
+Last activity: 2026-03-02 — Plan 01-01 complete: install.sh, validate-yaml.py, verify-mcp-scope.sh created
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 13%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: —
-- Total execution time: —
+- Total plans completed: 1
+- Average duration: 4min
+- Total execution time: 4min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-foundation | 1 | 4min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: —
-- Trend: —
+- Last 5 plans: 4min
+- Trend: baseline established
 
 *Updated after each plan completion*
 
@@ -46,6 +46,9 @@ Recent decisions affecting current work:
 - [Roadmap]: `seo-site-audit-pro` must use sequential wave architecture with 3-4 agent cap per wave and checkpoint saves — shared AbortController causes cascade termination on rate-limit errors (GitHub Issue #6594)
 - [Roadmap]: LOCAL-01 (markdown-audit) placed in Phase 2 with live-data commands — no MCP dependency, delivers immediate value while GSC/Ahrefs integration is being proven
 - [Roadmap]: Enhanced originals (ORIG-01 through ORIG-12) placed in Phase 4 — they work today via static analysis; getting live data commands right is higher priority than polishing existing functionality
+- [01-01]: YAML description limit set to 1000 chars (not 500) — seo/SKILL.md orchestrator has 870-char description that is valid; main orchestrator legitimately needs more text than sub-skills
+- [01-01]: install.sh uses venv python for YAML validation when available, falls back gracefully when PyYAML not in system python3
+- [01-01]: verify-mcp-scope.sh always exits 0 — MCP registration is informational, not blocking
 
 ### Pending Todos
 
@@ -61,5 +64,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-02
-Stopped at: Roadmap created, STATE.md initialized — ready to begin planning Phase 1
+Stopped at: Completed 01-01-PLAN.md — install infrastructure, YAML validation, MCP scope check
 Resume file: None

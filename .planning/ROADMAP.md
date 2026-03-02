@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Install script, source repo layout, YAML validation, Python venv setup, MCP scope verification (Wave 1)
+- [x] 01-01-PLAN.md — Install script, source repo layout, YAML validation, Python venv setup, MCP scope verification (Wave 1)
 - [ ] 01-02-PLAN.md — Orchestrator 27-command routing table, shared reference files (mcp-degradation, Ahrefs API, GSC API), graceful degradation pattern (Wave 2)
 
 ### Phase 2: Core Live Data
