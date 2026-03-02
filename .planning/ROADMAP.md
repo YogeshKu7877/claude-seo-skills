@@ -45,12 +45,13 @@ Plans:
   3. `/seo gsc drops <site>` identifies pages and keywords that lost traffic in the past 28 days with percentage deltas, sourced from GSC MCP
   4. `/seo ahrefs content-gap <domain>` lists keywords that competitor domains rank for that the target domain does not, sourced from Ahrefs MCP
   5. `/seo markdown-audit <path>` analyzes a local markdown file and returns SEO improvement recommendations with no MCP connection required
-**Plans**: TBD
+**Plans:** 4 plans
 
 Plans:
-- [ ] 02-01: GSC sub-skill (`seo/gsc/SKILL.md`) with all 9 sub-commands (overview, drops, opportunities, cannibalization, index-issues, compare, brand-vs-nonbrand, content-decay, new-keywords) and `seo-gsc-analyst` agent
-- [ ] 02-02: Ahrefs sub-skill (`seo/ahrefs/SKILL.md`) with all 10 sub-commands (overview, backlinks, keywords, competitors, content-gap, broken-links, new-links, anchor-analysis, dr-history, top-pages) and `seo-ahrefs-analyst` agent
-- [ ] 02-03: Markdown audit sub-skill (`seo/markdown-audit/SKILL.md`) with no MCP dependency — pure content and structure analysis
+- [ ] 02-01-PLAN.md — Fix routing table discrepancy, update GSC API reference with verified tool names, build seo-markdown-audit sub-skill (Wave 1)
+- [ ] 02-02-PLAN.md — Build 9 GSC sub-skills: overview, drops, opportunities, cannibalization, index-issues, compare, brand-vs-nonbrand, content-decay, new-keywords (Wave 2)
+- [ ] 02-03-PLAN.md — Build 10 Ahrefs sub-skills: overview, backlinks, keywords, competitors, content-gap, broken-links, new-links, anchor-analysis, dr-history, top-pages (Wave 2, parallel with 02-02)
+- [ ] 02-04-PLAN.md — Update install.sh, mark Phase 2 commands active in routing table, deploy and human-verify end-to-end (Wave 3)
 
 ### Phase 3: Cross-MCP & Differentiating
 **Goal**: Users can run commands that synthesize Ahrefs and GSC data together for insights neither source alone provides, including the flagship multi-agent site audit and automated report generation
