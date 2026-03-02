@@ -1,16 +1,17 @@
 ---
 name: seo
 description: >
-  Comprehensive SEO analysis for any website or business type. Orchestrates 37 sub-skills
-  (37 active): full site audits, single-page analysis, technical SEO (CWV/INP), schema markup,
+  Comprehensive SEO analysis for any website or business type. Orchestrates 42 sub-skills
+  (42 active): full site audits, single-page analysis, technical SEO (CWV/INP), schema markup,
   E-E-A-T content quality (Dec 2025 QRG), image optimization, sitemaps, GEO for AI Overviews,
   ChatGPT, Perplexity, plus live GSC and Ahrefs MCP data. GSC: overview, drops, opportunities,
   brand-vs-nonbrand, cannibalization, compare, content-decay, index-issues, new-keywords.
   Ahrefs: overview, backlinks, keywords, competitors, content-gap, broken-links, new-links,
   anchor-analysis, dr-history, top-pages. Cross-MCP: serp, content-brief, brand-radar,
-  site-audit-pro, report. Triggers on: "SEO", "audit", "schema", "Core Web Vitals", "sitemap",
-  "E-E-A-T", "AI Overviews", "GEO", "technical SEO", "content quality", "page speed",
-  "structured data", "GSC", "Ahrefs", "backlinks", "keywords", "search console", "domain rating".
+  site-audit-pro, report. Local: log-analysis, ai-content-check, internal-links, local, migration-check.
+  Triggers on: "SEO", "audit", "schema", "Core Web Vitals", "sitemap", "E-E-A-T", "AI Overviews",
+  "GEO", "technical SEO", "content quality", "page speed", "structured data", "GSC", "Ahrefs",
+  "backlinks", "keywords", "search console", "domain rating", "local SEO", "migration".
 allowed-tools:
   - Read
   - Grep
@@ -22,12 +23,12 @@ allowed-tools:
 # SEO — Universal SEO Analysis Skill
 
 Comprehensive SEO analysis across all industries (SaaS, local services,
-e-commerce, publishers, agencies). Orchestrates 37 specialized sub-skills
-(37 active) and 6 subagents.
+e-commerce, publishers, agencies). Orchestrates 42 specialized sub-skills
+(42 active) and 6 subagents.
 
 ## Quick Reference
 
-### Active Commands (Phase 1)
+### Active Commands (Phase 1 — Enhanced)
 
 | Command | What it does | Status |
 |---------|-------------|--------|
@@ -78,6 +79,16 @@ e-commerce, publishers, agencies). Orchestrates 37 specialized sub-skills
 | `/seo brand-radar <brand>` | AI search brand monitoring via Ahrefs Brand Radar | active |
 | `/seo site-audit-pro <domain>` | Flagship multi-MCP audit (sequential wave architecture) | active |
 | `/seo report <type> <domain>` | Automated report generation from available MCP data | active |
+
+### Active Commands (Phase 4 — Local Analysis)
+
+| Command | What it does | Status |
+|---------|-------------|--------|
+| `/seo log-analysis <file>` | Server log crawl budget analysis | active |
+| `/seo ai-content-check <url or file>` | AI content detection and authenticity scoring | active |
+| `/seo internal-links <domain>` | Internal link structure analysis and orphan detection | active |
+| `/seo local <business>` | Local SEO audit (NAP, schema, GBP, citations) | active |
+| `/seo migration-check <old> <new>` | Site migration redirect and SEO validator | active |
 
 ## Orchestration Logic
 
@@ -131,7 +142,7 @@ For grouped commands, extract the sub-command and route to the specific sub-skil
 
 ### Routing Table
 
-Full mapping of all 37 commands to sub-skill directory names:
+Full mapping of all 42 commands to sub-skill directory names:
 
 | Command | Sub-skill Directory | Status |
 |---------|--------------------|----|
@@ -172,6 +183,11 @@ Full mapping of all 37 commands to sub-skill directory names:
 | `/seo brand-radar` | `seo-brand-radar/` | active |
 | `/seo site-audit-pro` | `seo-site-audit-pro/` | active |
 | `/seo report` | `seo-report/` | active |
+| `/seo log-analysis` | `seo-log-analysis/` | active |
+| `/seo ai-content-check` | `seo-ai-content-check/` | active |
+| `/seo internal-links` | `seo-internal-links/` | active |
+| `/seo local` | `seo-local/` | active |
+| `/seo migration-check` | `seo-migration-check/` | active |
 
 ### Unavailable Command Response
 
@@ -242,7 +258,7 @@ Weighted aggregate of all categories:
 
 ## Sub-Skills
 
-This skill orchestrates 37 specialized sub-skills (37 active):
+This skill orchestrates 42 specialized sub-skills (42 active):
 
 **Active (Phase 1 — Static Analysis):**
 1. **seo-audit** — Full website audit with parallel delegation
@@ -290,6 +306,13 @@ This skill orchestrates 37 specialized sub-skills (37 active):
 35. **seo-brand-radar** — Brand monitoring via Ahrefs Brand Radar
 36. **seo-site-audit-pro** — Flagship multi-MCP audit (sequential wave)
 37. **seo-report** — Automated report generation
+
+**Active (Phase 4 — Local Analysis):**
+38. **seo-log-analysis** — Server log crawl budget analysis
+39. **seo-ai-content-check** — AI content detection
+40. **seo-internal-links** — Internal link structure audit
+41. **seo-local** — Local SEO audit
+42. **seo-migration-check** — Site migration validator
 
 ## Subagents
 
