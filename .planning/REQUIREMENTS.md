@@ -66,7 +66,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Local Analysis Commands (New)
 
-- [ ] **LOCAL-01**: `/seo markdown-audit <path>` — Audit markdown files for SEO before publishing (no MCP needed)
+- [x] **LOCAL-01**: `/seo markdown-audit <path>` — Audit markdown files for SEO before publishing (no MCP needed)
 - [ ] **LOCAL-02**: `/seo log-analysis <file>` — Server log analysis for crawl patterns
 - [ ] **LOCAL-03**: `/seo ai-content-check <url or file>` — AI content detection and authenticity optimization
 - [ ] **LOCAL-04**: `/seo internal-links <domain>` — Internal link structure analysis and optimization
@@ -141,7 +141,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AHRF-08 | Phase 2 | Pending |
 | AHRF-09 | Phase 2 | Pending |
 | AHRF-10 | Phase 2 | Pending |
-| LOCAL-01 | Phase 2 | Pending |
+| LOCAL-01 | Phase 2 | Complete |
 | CROSS-01 | Phase 3 | Pending |
 | CROSS-02 | Phase 3 | Pending |
 | CROSS-03 | Phase 3 | Pending |

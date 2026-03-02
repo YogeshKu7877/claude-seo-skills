@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01-PLAN.md — Install script, source repo layout, YAML validation, Python venv setup, MCP scope verification (Wave 1)
-- [ ] 01-02-PLAN.md — Orchestrator 27-command routing table, shared reference files (mcp-degradation, Ahrefs API, GSC API), graceful degradation pattern (Wave 2)
+- [x] 01-02-PLAN.md — Orchestrator 27-command routing table, shared reference files (mcp-degradation, Ahrefs API, GSC API), graceful degradation pattern (Wave 2)
 
 ### Phase 2: Core Live Data
 **Goal**: Users can query real GSC performance data and live Ahrefs data through 19 commands, and can audit markdown files locally — these are the commands that replace estimated data with actual data
@@ -48,7 +48,7 @@ Plans:
 **Plans:** 4 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Fix routing table discrepancy, update GSC API reference with verified tool names, build seo-markdown-audit sub-skill (Wave 1)
+- [x] 02-01-PLAN.md — Fix routing table discrepancy, update GSC API reference with verified tool names, build seo-markdown-audit sub-skill (Wave 1)
 - [ ] 02-02-PLAN.md — Build 9 GSC sub-skills: overview, drops, opportunities, cannibalization, index-issues, compare, brand-vs-nonbrand, content-decay, new-keywords (Wave 2)
 - [ ] 02-03-PLAN.md — Build 10 Ahrefs sub-skills: overview, backlinks, keywords, competitors, content-gap, broken-links, new-links, anchor-analysis, dr-history, top-pages (Wave 2, parallel with 02-02)
 - [ ] 02-04-PLAN.md — Update install.sh, mark Phase 2 commands active in routing table, deploy and human-verify end-to-end (Wave 3)
@@ -95,6 +95,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete   | 2026-03-02 |
-| 2. Core Live Data | 0/3 | Not started | - |
+| 2. Core Live Data | 1/4 | In progress | - |
 | 3. Cross-MCP & Differentiating | 0/3 | Not started | - |
 | 4. Enhanced Originals & Local Analysis | 0/3 | Not started | - |
