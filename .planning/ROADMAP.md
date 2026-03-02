@@ -63,12 +63,12 @@ Plans:
   3. `/seo brand-radar <brand>` returns AI search visibility data from Ahrefs Brand Radar; if the endpoint is unavailable, the command returns a clear error rather than fabricated results
   4. `/seo site-audit-pro <domain>` completes without crashing when any single agent hits a rate-limit error — the audit continues with remaining agents and notes skipped data sources in the output
   5. `/seo report <type> <domain>` produces a complete markdown report file with AI-generated narrative layered on top of the raw data — the file is saved to disk, not just printed to terminal
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 03-01: SERP analysis (`seo/serp/SKILL.md`) and content brief (`seo/content-brief/SKILL.md`) with Ahrefs SERP data + optional GSC overlay; `seo-competitor-analyst` agent
-- [ ] 03-02: Brand radar (`seo/brand-radar/SKILL.md`) and report generator (`seo/report/SKILL.md`) with multi-format report templates (monthly, weekly, audit, competitor)
-- [ ] 03-03: Site-audit-pro (`seo/site-audit-pro/SKILL.md`) with sequential wave architecture, 3-4 agent cap per wave, checkpoint saves, and cross-MCP synthesis section
+- [ ] 03-01-PLAN.md — SERP analysis (seo-serp) and content brief (seo-content-brief) with Ahrefs SERP data + optional GSC overlay, ahrefs-api-reference.md Phase 3 tool mappings (Wave 1)
+- [ ] 03-02-PLAN.md — Brand radar (seo-brand-radar) with runtime schema discovery and report generator (seo-report) with 4 report types and file persistence (Wave 1, parallel with 03-01)
+- [ ] 03-03-PLAN.md — Site-audit-pro (seo-site-audit-pro) with sequential wave architecture, checkpoint saves, rate-limit resilience; routing table update to 37 active; deploy and human-verify (Wave 2)
 
 ### Phase 4: Enhanced Originals & Local Analysis
 **Goal**: The 12 original commands surface real MCP data alongside their static analysis, and users can analyze server logs, check AI content authenticity, audit internal link structure, validate site migrations, and audit local SEO — all without needing new MCP connections
@@ -96,5 +96,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete   | 2026-03-02 |
 | 2. Core Live Data | 4/4 | Complete   | 2026-03-02 |
-| 3. Cross-MCP & Differentiating | 0/3 | Not started | - |
+| 3. Cross-MCP & Differentiating | 0/3 | Planned | - |
 | 4. Enhanced Originals & Local Analysis | 0/3 | Not started | - |
