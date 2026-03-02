@@ -13,7 +13,7 @@ This project expands the existing 12-command claude-seo skill system to 27 comma
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Install infrastructure, YAML validation, MCP scoping, shared references, and orchestrator routing table (completed 2026-03-02)
-- [ ] **Phase 2: Core Live Data** - GSC commands (9), Ahrefs commands (10), and markdown-audit — the primary differentiators over static analysis
+- [x] **Phase 2: Core Live Data** - GSC commands (9), Ahrefs commands (10), and markdown-audit — the primary differentiators over static analysis (completed 2026-03-02)
 - [ ] **Phase 3: Cross-MCP & Differentiating** - SERP analysis, content briefs, brand radar, site-audit-pro flagship, and automated reporting
 - [ ] **Phase 4: Enhanced Originals & Local Analysis** - Upgrade the 12 original commands with MCP overlays; add log analysis, AI content check, internal links, local SEO, and migration validation
 
@@ -45,7 +45,7 @@ Plans:
   3. `/seo gsc drops <site>` identifies pages and keywords that lost traffic in the past 28 days with percentage deltas, sourced from GSC MCP
   4. `/seo ahrefs content-gap <domain>` lists keywords that competitor domains rank for that the target domain does not, sourced from Ahrefs MCP
   5. `/seo markdown-audit <path>` analyzes a local markdown file and returns SEO improvement recommendations with no MCP connection required
-**Plans:** 3/4 plans executed
+**Plans:** 4/4 plans complete
 
 Plans:
 - [x] 02-01-PLAN.md — Fix routing table discrepancy, update GSC API reference with verified tool names, build seo-markdown-audit sub-skill (Wave 1)
@@ -95,6 +95,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete   | 2026-03-02 |
-| 2. Core Live Data | 3/4 | In Progress|  |
+| 2. Core Live Data | 4/4 | Complete   | 2026-03-02 |
 | 3. Cross-MCP & Differentiating | 0/3 | Not started | - |
 | 4. Enhanced Originals & Local Analysis | 0/3 | Not started | - |

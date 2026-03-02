@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-last_updated: "2026-03-02T07:29:00Z"
+status: unknown
+last_updated: "2026-03-02T07:42:58.026Z"
 progress:
-  total_phases: 4
-  completed_phases: 1
-  total_plans: 9
-  completed_plans: 4
+  total_phases: 2
+  completed_phases: 2
+  total_plans: 6
+  completed_plans: 6
 ---
 
 # Project State
@@ -74,6 +74,8 @@ Recent decisions affecting current work:
 - [Phase 02-03]: content-gap uses dual-approach: runtime ToolSearch schema discovery for keywords-explorer-matching-terms first, cross-reference fallback via site-explorer-organic-keywords if filter param absent
 - [Phase 02-03]: new-links uses client-side date filtering (last 30 days) since site-explorer-referring-domains tool may lack native date filter param
 - [Phase 02-03]: anchor-analysis health thresholds: branded >40%=healthy, exact-match >10%=over-optimized risk, generic >30%=low-quality signal
+- [Phase 02-04]: install.sh glob pattern picks up new sub-skills automatically — no explicit directory list needed
+- [Phase 02-04]: seo/SKILL.md routing table updated to 37 total commands (32 active, 5 Phase 3 planned) — all Phase 2 entries now marked active
 
 ### Pending Todos
 
