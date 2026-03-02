@@ -49,8 +49,8 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — Fix routing table discrepancy, update GSC API reference with verified tool names, build seo-markdown-audit sub-skill (Wave 1)
-- [ ] 02-02-PLAN.md — Build 9 GSC sub-skills: overview, drops, opportunities, cannibalization, index-issues, compare, brand-vs-nonbrand, content-decay, new-keywords (Wave 2)
-- [ ] 02-03-PLAN.md — Build 10 Ahrefs sub-skills: overview, backlinks, keywords, competitors, content-gap, broken-links, new-links, anchor-analysis, dr-history, top-pages (Wave 2, parallel with 02-02)
+- [x] 02-02-PLAN.md — Build 9 GSC sub-skills: overview, drops, opportunities, cannibalization, index-issues, compare, brand-vs-nonbrand, content-decay, new-keywords (Wave 2)
+- [x] 02-03-PLAN.md — Build 10 Ahrefs sub-skills: overview, backlinks, keywords, competitors, content-gap, broken-links, new-links, anchor-analysis, dr-history, top-pages (Wave 2, parallel with 02-02)
 - [x] 02-04-PLAN.md — Update install.sh, mark Phase 2 commands active in routing table, deploy and human-verify end-to-end (Wave 3) (completed 2026-03-02)
 
 ### Phase 3: Cross-MCP & Differentiating
@@ -66,9 +66,9 @@ Plans:
 **Plans:** 3/3 plans complete
 
 Plans:
-- [ ] 03-01-PLAN.md — SERP analysis (seo-serp) and content brief (seo-content-brief) with Ahrefs SERP data + optional GSC overlay, ahrefs-api-reference.md Phase 3 tool mappings (Wave 1)
-- [ ] 03-02-PLAN.md — Brand radar (seo-brand-radar) with runtime schema discovery and report generator (seo-report) with 4 report types and file persistence (Wave 1, parallel with 03-01)
-- [ ] 03-03-PLAN.md — Site-audit-pro (seo-site-audit-pro) with sequential wave architecture, checkpoint saves, rate-limit resilience; routing table update to 37 active; deploy and human-verify (Wave 2)
+- [x] 03-01-PLAN.md — SERP analysis (seo-serp) and content brief (seo-content-brief) with Ahrefs SERP data + optional GSC overlay, ahrefs-api-reference.md Phase 3 tool mappings (Wave 1)
+- [x] 03-02-PLAN.md — Brand radar (seo-brand-radar) with runtime schema discovery and report generator (seo-report) with 4 report types and file persistence (Wave 1, parallel with 03-01)
+- [x] 03-03-PLAN.md — Site-audit-pro (seo-site-audit-pro) with sequential wave architecture, checkpoint saves, rate-limit resilience; routing table update to 37 active; deploy and human-verify (Wave 2)
 
 ### Phase 4: Enhanced Originals & Local Analysis
 **Goal**: The 12 original commands surface real MCP data alongside their static analysis, and users can analyze server logs, check AI content authenticity, audit internal link structure, validate site migrations, and audit local SEO — all without needing new MCP connections
