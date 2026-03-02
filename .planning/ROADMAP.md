@@ -45,7 +45,7 @@ Plans:
   3. `/seo gsc drops <site>` identifies pages and keywords that lost traffic in the past 28 days with percentage deltas, sourced from GSC MCP
   4. `/seo ahrefs content-gap <domain>` lists keywords that competitor domains rank for that the target domain does not, sourced from Ahrefs MCP
   5. `/seo markdown-audit <path>` analyzes a local markdown file and returns SEO improvement recommendations with no MCP connection required
-**Plans:** 4 plans
+**Plans:** 3/4 plans executed
 
 Plans:
 - [x] 02-01-PLAN.md — Fix routing table discrepancy, update GSC API reference with verified tool names, build seo-markdown-audit sub-skill (Wave 1)
@@ -95,6 +95,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete   | 2026-03-02 |
-| 2. Core Live Data | 1/4 | In progress | - |
+| 2. Core Live Data | 3/4 | In Progress|  |
 | 3. Cross-MCP & Differentiating | 0/3 | Not started | - |
 | 4. Enhanced Originals & Local Analysis | 0/3 | Not started | - |

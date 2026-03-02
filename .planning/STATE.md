@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in-progress
-last_updated: "2026-03-02T07:19:25Z"
+last_updated: "2026-03-02T07:29:00Z"
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 9
-  completed_plans: 3
+  completed_plans: 4
 ---
 
 # Project State
@@ -23,11 +23,11 @@ See: .planning/PROJECT.md (updated 2026-02-27)
 ## Current Position
 
 Phase: 2 of 4 (Core Live Data)
-Plan: 1 of 7 in current phase (Phase 2, Plan 1 complete)
+Plan: 3 of 7 in current phase (Phase 2, Plan 3 complete)
 Status: In progress
-Last activity: 2026-03-02 — Plan 02-01 complete: GSC routing table corrected, gsc-api-reference.md verified, seo-markdown-audit/SKILL.md created
+Last activity: 2026-03-02 — Plan 02-03 complete: 10 Ahrefs sub-skill SKILL.md files created for /seo ahrefs command group
 
-Progress: [███░░░░░░░] 33%
+Progress: [████░░░░░░] 44%
 
 ## Performance Metrics
 
@@ -41,10 +41,10 @@ Progress: [███░░░░░░░] 33%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 2 | 8min | 4min |
-| 02-core-live-data | 1 | 3min | 3min |
+| 02-core-live-data | 3 | 13min | 4.3min |
 
 **Recent Trend:**
-- Last 5 plans: 4min, 4min, 3min
+- Last 5 plans: 4min, 4min, 3min, 5min, 5min
 - Trend: consistent
 
 *Updated after each plan completion*
@@ -68,6 +68,12 @@ Recent decisions affecting current work:
 - [Phase 02-01]: gsc-indexing directory name kept as seo-gsc-indexing, only user-facing command renamed to gsc-index-issues — avoids filesystem migration while matching REQUIREMENTS.md
 - [Phase 02-01]: CTR display rule: always multiply GSC decimal ctr by 100 for display (API returns 0.0523, show 5.23%)
 - [Phase 02-01]: seo-markdown-audit established as pattern for all Phase 2 sub-skills: frontmatter + Inputs + Execution + Output Format
+- [Phase 02-core-live-data]: inspect_url capped at 20 calls per run in seo-gsc-indexing to avoid rate-limit hangs
+- [Phase 02-core-live-data]: brand-vs-nonbrand requires explicit user confirmation of brand terms before any API call
+- [Phase 02-core-live-data]: content-decay requires both clicks AND impressions to decline — filters false positives from seasonal variation
+- [Phase 02-03]: content-gap uses dual-approach: runtime ToolSearch schema discovery for keywords-explorer-matching-terms first, cross-reference fallback via site-explorer-organic-keywords if filter param absent
+- [Phase 02-03]: new-links uses client-side date filtering (last 30 days) since site-explorer-referring-domains tool may lack native date filter param
+- [Phase 02-03]: anchor-analysis health thresholds: branded >40%=healthy, exact-match >10%=over-optimized risk, generic >30%=low-quality signal
 
 ### Pending Todos
 
@@ -83,5 +89,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-02
-Stopped at: Completed 02-01-PLAN.md — GSC routing table, gsc-api-reference.md verified tool names, seo-markdown-audit sub-skill
+Stopped at: Completed 02-03-PLAN.md — 10 Ahrefs sub-skill SKILL.md files created for /seo ahrefs command group (AHRF-01 through AHRF-10)
 Resume file: None
