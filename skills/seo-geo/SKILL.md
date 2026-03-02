@@ -2,12 +2,19 @@
 name: seo-geo
 description: >
   Optimize content for AI Overviews (formerly SGE), ChatGPT web search,
-  Perplexity, and other AI-powered search experiences. Generative Engine
-  Optimization (GEO) analysis including brand mention signals, AI crawler
-  accessibility, llms.txt compliance, passage-level citability scoring, and
-  platform-specific optimization. Use when user says "AI Overviews", "SGE",
-  "GEO", "AI search", "LLM optimization", "Perplexity", "AI citations",
-  "ChatGPT search", or "AI visibility".
+  Perplexity, and other AI-powered search experiences. GEO analysis enriched
+  with Ahrefs Brand Radar AI visibility data when available. Includes brand
+  mention signals, AI crawler accessibility, llms.txt compliance,
+  passage-level citability scoring, and platform-specific optimization.
+  Use when user says "AI Overviews", "SGE", "GEO", "AI search", "LLM
+  optimization", "Perplexity", "AI citations", "ChatGPT search",
+  "AI visibility", or "Brand Radar".
+allowed-tools:
+  - Read
+  - Bash
+  - Glob
+  - WebFetch
+  - ToolSearch
 ---
 
 # AI Search / GEO Optimization (February 2026)
@@ -229,3 +236,40 @@ Generate `GEO-ANALYSIS.md` with:
 3. Establish YouTube channel with content mentions
 4. Implement comprehensive entity linking (sameAs across platforms)
 5. Develop unique tools or calculators
+
+## Live Data Insights (MCP Overlay)
+
+@skills/seo/references/mcp-degradation.md
+
+### Ahrefs Brand Radar Enrichment
+
+If Ahrefs available: Use ToolSearch with query "+ahrefs brand-radar" to discover Brand Radar tools specifically.
+
+- If Brand Radar tools are found: fetch AI search visibility data for the brand.
+- Add `### AI Search Brand Visibility (Ahrefs Brand Radar)` section showing: brand mentions in AI responses, share of voice in AI search, cited pages, and impression trends.
+- This enriches the static GEO analysis with actual AI citation data — replacing estimates with real Brand Radar metrics.
+- If Brand Radar tools are NOT found (but other Ahrefs tools are): try ToolSearch with "+ahrefs" for broader Ahrefs tools and note that Brand Radar may require a separate subscription tier.
+- If Ahrefs MCP is not available: proceed with static GEO analysis only, noting that Brand Radar AI visibility data is unavailable.
+
+Note: GEO is about AI search optimization, not traditional search performance — no GSC overlay is applied here.
+
+### AI Search Brand Visibility (when Ahrefs Brand Radar available)
+
+| Metric | Value | Trend |
+|--------|-------|-------|
+| AI Overview mentions | [count] | [up/down/stable] |
+| Share of voice (AI search) | [%] | [trend] |
+| Top cited pages | [list] | |
+| AI impression trend (30d) | [impressions] | [trend] |
+
+**Brand Radar Insights:**
+- Strongest AI citation sources: [pages/content types performing best]
+- Citation gaps: [topic areas where brand is absent from AI responses]
+- Competitor AI visibility comparison: [if available from Brand Radar data]
+
+## Data Sources
+
+| Source | Status | Data Provided |
+|--------|--------|---------------|
+| Static Page Analysis | Always available | GEO readiness scoring, structure checks, AI crawler access |
+| Ahrefs Brand Radar (`+ahrefs brand-radar`) | If connected | AI mentions, share of voice, cited pages, impression trends |

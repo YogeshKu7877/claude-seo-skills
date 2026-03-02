@@ -1,9 +1,16 @@
 ---
 name: seo-sitemap
 description: >
-  Analyze existing XML sitemaps or generate new ones with industry templates.
-  Validates format, URLs, and structure. Use when user says "sitemap",
-  "generate sitemap", "sitemap issues", or "XML sitemap".
+  Analyze existing XML sitemaps or generate new ones with GSC indexing
+  cross-reference. Validates format, URLs, and structure against actual
+  indexing status. Use when user says "sitemap", "generate sitemap",
+  "sitemap issues", "XML sitemap", or "sitemap indexing".
+allowed-tools:
+  - Read
+  - Bash
+  - Glob
+  - WebFetch
+  - ToolSearch
 ---
 
 # Sitemap Analysis & Generation
@@ -102,3 +109,39 @@ description: >
 - `sitemap.xml` (or split files with index)
 - `STRUCTURE.md` — site architecture documentation
 - URL count and organization summary
+
+## Live Data Insights (MCP Overlay)
+
+@skills/seo/references/mcp-degradation.md
+
+### GSC Indexing Cross-Reference
+
+If GSC available: Use ToolSearch with query "+google-search-console" to check availability.
+
+- If GSC MCP tools are returned: fetch `get_indexing_status` or `inspect_url` for a sample of sitemap URLs (max 20 URLs to avoid rate-limit issues).
+- Add `### Sitemap vs Index Coverage (GSC)` section showing how many sitemap URLs are actually indexed, which are not indexed, and the specific non-indexing reasons reported by Google.
+- This is the most valuable cross-reference for sitemap audits — it reveals whether Google is actually processing the sitemap correctly.
+- If GSC MCP is not available: proceed with static sitemap validation only, noting that live indexing status is unavailable.
+
+### Sitemap vs Index Coverage (when GSC available)
+
+| Metric | Count | Notes |
+|--------|-------|-------|
+| Sitemap URLs sampled | [up to 20] | |
+| Confirmed indexed | [count] | |
+| Not indexed | [count] | |
+| Coverage errors | [count] | See breakdown below |
+
+**Non-indexing reasons breakdown** (from GSC `inspect_url`):
+- Crawled — currently not indexed: [count]
+- Discovered — currently not indexed: [count]
+- Blocked by robots.txt: [count]
+- Page with redirect: [count]
+- Other reasons: [count]
+
+## Data Sources
+
+| Source | Status | Data Provided |
+|--------|--------|---------------|
+| Static XML Analysis | Always available | Format validation, URL checks, structure review |
+| GSC MCP (`+google-search-console`) | If connected | Live indexing status per URL, non-indexing reasons |

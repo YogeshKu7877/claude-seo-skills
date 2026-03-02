@@ -1,9 +1,15 @@
 ---
 name: seo-schema
 description: >
-  Detect, validate, and generate Schema.org structured data. JSON-LD format
-  preferred. Use when user says "schema", "structured data", "rich results",
-  "JSON-LD", or "markup".
+  Detect, validate, and generate Schema.org structured data with Ahrefs traffic
+  prioritization. JSON-LD format preferred. Use when user says "schema",
+  "structured data", "rich results", "JSON-LD", "markup", or "schema priority".
+allowed-tools:
+  - Read
+  - Bash
+  - Glob
+  - WebFetch
+  - ToolSearch
 ---
 
 # Schema Markup Analysis & Generation
@@ -149,3 +155,32 @@ When generating schema for a page:
 - Missing schema opportunities
 - Validation fixes needed
 - Generated code for implementation
+
+## Live Data Insights (MCP Overlay)
+
+@skills/seo/references/mcp-degradation.md
+
+### Ahrefs Traffic Prioritization
+
+If Ahrefs available: Use ToolSearch with query "+ahrefs" to check availability.
+
+- If Ahrefs MCP tools are returned: fetch `site-explorer-top-pages` for the domain to identify highest-traffic pages.
+- Add `### Schema Priority by Traffic` section showing which pages receive the most organic traffic and their current schema status — prioritize schema implementation on these pages first.
+- Pages with high traffic but missing schema are the highest-impact opportunities.
+- If Ahrefs MCP is not available: proceed with static schema analysis only, noting that traffic-based prioritization is unavailable.
+
+### Schema Priority by Traffic (when Ahrefs available)
+
+| Page | Monthly Visits | Schema Status | Priority |
+|------|---------------|---------------|----------|
+| [top page 1] | [visits] | [present/missing] | [High/Medium/Low] |
+| [top page 2] | [visits] | [present/missing] | [High/Medium/Low] |
+
+Prioritization logic: pages with >1,000 monthly visits and missing schema are Critical priority. Pages with >500 visits and incomplete schema are High priority.
+
+## Data Sources
+
+| Source | Status | Data Provided |
+|--------|--------|---------------|
+| Static HTML Analysis | Always available | Schema detection, validation, type checking |
+| Ahrefs MCP (`+ahrefs`) | If connected | Top-pages traffic data for schema prioritization |
