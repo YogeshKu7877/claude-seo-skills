@@ -1,15 +1,17 @@
 ---
 name: seo
 description: >
-  Comprehensive SEO analysis for any website or business type. Orchestrates 27 sub-skills
-  (12 active, 15 planned): full site audits, single-page analysis, technical SEO (CWV/INP),
-  schema markup, E-E-A-T content quality (Dec 2025 QRG), image optimization, sitemaps, and
-  GEO for AI Overviews, ChatGPT, Perplexity. Analyzes AI crawlers (GPTBot, ClaudeBot),
-  llms.txt, brand signals. Phase 2+ adds live Google Search Console and Ahrefs MCP data.
-  Industry detection for SaaS, e-commerce, local, publishers, agencies. Triggers on: "SEO",
-  "audit", "schema", "Core Web Vitals", "sitemap", "E-E-A-T", "AI Overviews", "GEO",
-  "technical SEO", "content quality", "page speed", "structured data", "GSC", "Ahrefs",
-  "backlinks", "keywords", "search console", "domain rating", "keyword rankings".
+  Comprehensive SEO analysis for any website or business type. Orchestrates 37 sub-skills
+  (32 active, 5 planned): full site audits, single-page analysis, technical SEO (CWV/INP),
+  schema markup, E-E-A-T content quality (Dec 2025 QRG), image optimization, sitemaps, GEO
+  for AI Overviews, ChatGPT, Perplexity, plus live Google Search Console and Ahrefs MCP data.
+  GSC commands: overview, drops, opportunities, brand-vs-nonbrand, cannibalization, compare,
+  content-decay, index-issues, new-keywords. Ahrefs: overview, backlinks, keywords, competitors,
+  content-gap, broken-links, new-links, anchor-analysis, dr-history, top-pages. Industry
+  detection for SaaS, e-commerce, local, publishers, agencies. Triggers on: "SEO", "audit",
+  "schema", "Core Web Vitals", "sitemap", "E-E-A-T", "AI Overviews", "GEO", "technical SEO",
+  "content quality", "page speed", "structured data", "GSC", "Ahrefs", "backlinks", "keywords",
+  "search console", "domain rating", "keyword rankings".
 allowed-tools:
   - Read
   - Grep
@@ -21,8 +23,8 @@ allowed-tools:
 # SEO — Universal SEO Analysis Skill
 
 Comprehensive SEO analysis across all industries (SaaS, local services,
-e-commerce, publishers, agencies). Orchestrates 27 specialized sub-skills
-(12 active, 15 planned) and 6 subagents.
+e-commerce, publishers, agencies). Orchestrates 37 specialized sub-skills
+(32 active, 5 planned) and 6 subagents.
 
 ## Quick Reference
 
@@ -43,30 +45,30 @@ e-commerce, publishers, agencies). Orchestrates 27 specialized sub-skills
 | `/seo competitor-pages [url\|generate]` | Competitor comparison page generation | active |
 | `/seo hreflang [url]` | Hreflang/i18n SEO audit and generation | active |
 
-### Phase 2 Commands (Live MCP Data)
+### Active Commands (Phase 2 — Live MCP Data)
 
 | Command | What it does | Status |
 |---------|-------------|--------|
-| `/seo gsc overview <site>` | GSC performance overview (clicks, impressions, CTR, position) | Phase 2 |
-| `/seo gsc drops <site>` | Detect keyword/page ranking drops | Phase 2 |
-| `/seo gsc opportunities <site>` | Find high-impression, low-CTR opportunities | Phase 2 |
-| `/seo gsc brand-vs-nonbrand <site>` | Brand vs non-brand traffic split analysis | Phase 2 |
-| `/seo gsc cannibalization <site>` | Detect keyword cannibalization | Phase 2 |
-| `/seo gsc compare <site>` | Period-over-period comparison (MoM, YoY) | Phase 2 |
-| `/seo gsc content-decay <site>` | Pages losing rankings over 90 days | Phase 2 |
-| `/seo gsc index-issues <site>` | Pages not indexed with reasons | Phase 2 |
-| `/seo gsc new-keywords <site>` | Keywords started ranking for recently | Phase 2 |
-| `/seo ahrefs overview <domain>` | Domain authority, traffic, and top metrics | Phase 2 |
-| `/seo ahrefs backlinks <domain>` | Backlink profile analysis | Phase 2 |
-| `/seo ahrefs keywords <domain>` | Organic keyword rankings | Phase 2 |
-| `/seo ahrefs competitors <domain>` | Identify organic competitors | Phase 2 |
-| `/seo ahrefs content-gap <domain>` | Keywords competitors rank for, you don't | Phase 2 |
-| `/seo ahrefs broken-links <domain>` | Find broken backlinks to reclaim | Phase 2 |
-| `/seo ahrefs new-links <domain>` | New referring domains (last 30 days) | Phase 2 |
-| `/seo ahrefs anchor-analysis <domain>` | Anchor text distribution analysis | Phase 2 |
-| `/seo ahrefs dr-history <domain>` | Domain Rating history trend | Phase 2 |
-| `/seo ahrefs top-pages <domain>` | Top pages by organic traffic | Phase 2 |
-| `/seo markdown-audit <path>` | Markdown SEO audit (no MCP needed) | Phase 2 |
+| `/seo gsc overview <site>` | GSC performance overview (clicks, impressions, CTR, position) | active |
+| `/seo gsc drops <site>` | Detect keyword/page ranking drops | active |
+| `/seo gsc opportunities <site>` | Find high-impression, low-CTR opportunities | active |
+| `/seo gsc brand-vs-nonbrand <site>` | Brand vs non-brand traffic split analysis | active |
+| `/seo gsc cannibalization <site>` | Detect keyword cannibalization | active |
+| `/seo gsc compare <site>` | Period-over-period comparison (MoM, YoY) | active |
+| `/seo gsc content-decay <site>` | Pages losing rankings over 90 days | active |
+| `/seo gsc index-issues <site>` | Pages not indexed with reasons | active |
+| `/seo gsc new-keywords <site>` | Keywords started ranking for recently | active |
+| `/seo ahrefs overview <domain>` | Domain authority, traffic, and top metrics | active |
+| `/seo ahrefs backlinks <domain>` | Backlink profile analysis | active |
+| `/seo ahrefs keywords <domain>` | Organic keyword rankings | active |
+| `/seo ahrefs competitors <domain>` | Identify organic competitors | active |
+| `/seo ahrefs content-gap <domain>` | Keywords competitors rank for, you don't | active |
+| `/seo ahrefs broken-links <domain>` | Find broken backlinks to reclaim | active |
+| `/seo ahrefs new-links <domain>` | New referring domains (last 30 days) | active |
+| `/seo ahrefs anchor-analysis <domain>` | Anchor text distribution analysis | active |
+| `/seo ahrefs dr-history <domain>` | Domain Rating history trend | active |
+| `/seo ahrefs top-pages <domain>` | Top pages by organic traffic | active |
+| `/seo markdown-audit <path>` | Markdown SEO audit (no MCP needed) | active |
 
 ### Phase 3 Commands (Multi-MCP)
 
@@ -130,7 +132,7 @@ For grouped commands, extract the sub-command and route to the specific sub-skil
 
 ### Routing Table
 
-Full mapping of all 27 commands to sub-skill directory names:
+Full mapping of all 37 commands to sub-skill directory names:
 
 | Command | Sub-skill Directory | Status |
 |---------|--------------------|----|
@@ -146,26 +148,26 @@ Full mapping of all 27 commands to sub-skill directory names:
 | `/seo programmatic` | `seo-programmatic/` | active |
 | `/seo competitor-pages` | `seo-competitor-pages/` | active |
 | `/seo hreflang` | `seo-hreflang/` | active |
-| `/seo gsc overview` | `seo-gsc-overview/` | Phase 2 |
-| `/seo gsc drops` | `seo-gsc-drops/` | Phase 2 |
-| `/seo gsc opportunities` | `seo-gsc-opportunities/` | Phase 2 |
-| `/seo gsc brand-vs-nonbrand` | `seo-gsc-brand-vs-nonbrand/` | Phase 2 |
-| `/seo gsc cannibalization` | `seo-gsc-cannibalization/` | Phase 2 |
-| `/seo gsc compare` | `seo-gsc-compare/` | Phase 2 |
-| `/seo gsc content-decay` | `seo-gsc-content-decay/` | Phase 2 |
-| `/seo gsc index-issues` | `seo-gsc-indexing/` | Phase 2 |
-| `/seo gsc new-keywords` | `seo-gsc-new-keywords/` | Phase 2 |
-| `/seo ahrefs overview` | `seo-ahrefs-overview/` | Phase 2 |
-| `/seo ahrefs backlinks` | `seo-ahrefs-backlinks/` | Phase 2 |
-| `/seo ahrefs keywords` | `seo-ahrefs-keywords/` | Phase 2 |
-| `/seo ahrefs competitors` | `seo-ahrefs-competitors/` | Phase 2 |
-| `/seo ahrefs content-gap` | `seo-ahrefs-content-gap/` | Phase 2 |
-| `/seo ahrefs broken-links` | `seo-ahrefs-broken-links/` | Phase 2 |
-| `/seo ahrefs new-links` | `seo-ahrefs-new-links/` | Phase 2 |
-| `/seo ahrefs anchor-analysis` | `seo-ahrefs-anchor-analysis/` | Phase 2 |
-| `/seo ahrefs dr-history` | `seo-ahrefs-dr-history/` | Phase 2 |
-| `/seo ahrefs top-pages` | `seo-ahrefs-top-pages/` | Phase 2 |
-| `/seo markdown-audit` | `seo-markdown-audit/` | Phase 2 |
+| `/seo gsc overview` | `seo-gsc-overview/` | active |
+| `/seo gsc drops` | `seo-gsc-drops/` | active |
+| `/seo gsc opportunities` | `seo-gsc-opportunities/` | active |
+| `/seo gsc brand-vs-nonbrand` | `seo-gsc-brand-vs-nonbrand/` | active |
+| `/seo gsc cannibalization` | `seo-gsc-cannibalization/` | active |
+| `/seo gsc compare` | `seo-gsc-compare/` | active |
+| `/seo gsc content-decay` | `seo-gsc-content-decay/` | active |
+| `/seo gsc index-issues` | `seo-gsc-indexing/` | active |
+| `/seo gsc new-keywords` | `seo-gsc-new-keywords/` | active |
+| `/seo ahrefs overview` | `seo-ahrefs-overview/` | active |
+| `/seo ahrefs backlinks` | `seo-ahrefs-backlinks/` | active |
+| `/seo ahrefs keywords` | `seo-ahrefs-keywords/` | active |
+| `/seo ahrefs competitors` | `seo-ahrefs-competitors/` | active |
+| `/seo ahrefs content-gap` | `seo-ahrefs-content-gap/` | active |
+| `/seo ahrefs broken-links` | `seo-ahrefs-broken-links/` | active |
+| `/seo ahrefs new-links` | `seo-ahrefs-new-links/` | active |
+| `/seo ahrefs anchor-analysis` | `seo-ahrefs-anchor-analysis/` | active |
+| `/seo ahrefs dr-history` | `seo-ahrefs-dr-history/` | active |
+| `/seo ahrefs top-pages` | `seo-ahrefs-top-pages/` | active |
+| `/seo markdown-audit` | `seo-markdown-audit/` | active |
 | `/seo serp` | `seo-serp/` | Phase 3 |
 | `/seo content-brief` | `seo-content-brief/` | Phase 3 |
 | `/seo brand-radar` | `seo-brand-radar/` | Phase 3 |
@@ -181,10 +183,10 @@ If a command is marked as Phase 2+ and its sub-skill directory does not exist:
 
 Example response for unavailable command:
 ```
-/seo gsc overview is planned for Phase 2 and not yet available.
+/seo serp is planned for Phase 3 and not yet available.
 
 While waiting, you can use:
-- `/seo technical <url>` — static technical SEO audit without live GSC data
+- `/seo ahrefs keywords <domain>` — organic keyword rankings via Ahrefs MCP
 - `/seo audit <url>` — full site audit using available static analysis
 ```
 
@@ -241,9 +243,9 @@ Weighted aggregate of all categories:
 
 ## Sub-Skills
 
-This skill orchestrates 27 specialized sub-skills (12 active, 15 planned):
+This skill orchestrates 37 specialized sub-skills (32 active, 5 planned):
 
-**Active (Phase 1):**
+**Active (Phase 1 — Static Analysis):**
 1. **seo-audit** — Full website audit with parallel delegation
 2. **seo-page** — Deep single-page analysis
 3. **seo-technical** — Technical SEO (8 categories)
@@ -257,7 +259,7 @@ This skill orchestrates 27 specialized sub-skills (12 active, 15 planned):
 11. **seo-competitor-pages** — Competitor comparison page generation
 12. **seo-hreflang** — Hreflang/i18n SEO audit and generation
 
-**Phase 2 (GSC MCP — requires GSC MCP registration):**
+**Active (Phase 2 — GSC MCP, requires GSC MCP registration):**
 13. **seo-gsc-overview** — GSC performance dashboard
 14. **seo-gsc-drops** — Ranking drop detection
 15. **seo-gsc-opportunities** — High-impression, low-CTR opportunity finder
@@ -268,7 +270,7 @@ This skill orchestrates 27 specialized sub-skills (12 active, 15 planned):
 20. **seo-gsc-indexing** — Pages not indexed with reasons
 21. **seo-gsc-new-keywords** — Keywords started ranking for recently
 
-**Phase 2 (Ahrefs MCP):**
+**Active (Phase 2 — Ahrefs MCP):**
 22. **seo-ahrefs-overview** — Domain authority and top metrics
 23. **seo-ahrefs-backlinks** — Backlink profile analysis
 24. **seo-ahrefs-keywords** — Organic keyword rankings
@@ -279,9 +281,11 @@ This skill orchestrates 27 specialized sub-skills (12 active, 15 planned):
 29. **seo-ahrefs-anchor-analysis** — Anchor text distribution
 30. **seo-ahrefs-dr-history** — Domain Rating history
 31. **seo-ahrefs-top-pages** — Top pages by organic traffic
-32. **seo-markdown-audit** — Markdown file SEO audit
 
-**Phase 3 (Multi-MCP):**
+**Active (Phase 2 — Local/No MCP):**
+32. **seo-markdown-audit** — Markdown file SEO audit (no MCP needed)
+
+**Phase 3 (Multi-MCP — Planned):**
 33. **seo-serp** — Live SERP analysis
 34. **seo-content-brief** — AI content brief from SERP data
 35. **seo-brand-radar** — Brand monitoring via Ahrefs Brand Radar
