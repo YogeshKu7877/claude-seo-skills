@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-02T07:42:58.026Z"
+last_updated: "2026-03-02T09:40:31.464Z"
 progress:
-  total_phases: 2
+  total_phases: 3
   completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 9
+  completed_plans: 8
 ---
 
 # Project State
@@ -18,14 +18,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-27)
 
 **Core value:** Every /seo command delivers actionable SEO insights using real data from connected MCPs — not estimates or static analysis alone.
-**Current focus:** Phase 2 — Core Live Data
+**Current focus:** Phase 3 — Cross-MCP Differentiating
 
 ## Current Position
 
-Phase: 2 of 4 (Core Live Data)
-Plan: 4 of 7 in current phase (Phase 2, Plan 4 complete)
+Phase: 3 of 4 (Cross-MCP Differentiating)
+Plan: 2 of 3 in current phase (Phase 3, Plan 2 complete)
 Status: In progress
-Last activity: 2026-03-02 — Plan 02-04 complete: All 20 Phase 2 sub-skills deployed and human-verified
+Last activity: 2026-03-02 — Plan 03-02 complete: seo-brand-radar and seo-report sub-skills created
 
 Progress: [████░░░░░░] 57%
 
@@ -48,6 +48,8 @@ Progress: [████░░░░░░] 57%
 - Trend: consistent
 
 *Updated after each plan completion*
+| Phase 03-cross-mcp-differentiating P02 | 2 | 2 tasks | 2 files |
+| Phase 03-cross-mcp-differentiating P01 | 3 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -76,6 +78,13 @@ Recent decisions affecting current work:
 - [Phase 02-03]: anchor-analysis health thresholds: branded >40%=healthy, exact-match >10%=over-optimized risk, generic >30%=low-quality signal
 - [Phase 02-04]: install.sh glob pattern picks up new sub-skills automatically — no explicit directory list needed
 - [Phase 02-04]: seo/SKILL.md routing table updated to 37 total commands (32 active, 5 Phase 3 planned) — all Phase 2 entries now marked active
+- [Phase 03-02]: seo-brand-radar uses runtime ToolSearch schema discovery — Brand Radar API parameter names unverified at authoring time
+- [Phase 03-02]: seo-report adds Write to allowed-tools — first sub-skill in project with file persistence
+- [Phase 03-02]: seo-report GSC is optional (non-fatal) — all report types anchor on Ahrefs data, GSC enriches but does not block
+- [Phase 03-01]: [03-01]: seo-serp uses Ahrefs-primary + WebMCP-optional — Ahrefs-only is default mode; WebMCP enriches top-3 titles if available
+- [Phase 03-01]: [03-01]: seo-content-brief inlines SERP logic — skills cannot call each other as sub-routines in Claude Code
+- [Phase 03-01]: [03-01]: ToolSearch schema discovery step is mandatory before serp-overview call — parameter name (keyword/query/term) is unverified
+- [Phase 03-01]: [03-01]: GSC overlay in content-brief is non-blocking — brief generates from SERP data alone when GSC unavailable
 
 ### Pending Todos
 
@@ -85,11 +94,11 @@ None yet.
 
 - [Phase 2]: GSC MCP registered alias unknown — sub-skills must use ToolSearch at runtime to discover prefix (property format now verified as both sc-domain: and https:// accepted)
 - [Phase 2]: Ahrefs API unit cost per endpoint unknown — monthly budget implications for `seo-site-audit-pro` design must be checked against account before Phase 3 planning
-- [Phase 3]: Ahrefs Brand Radar endpoint name and response schema unverified — validate against live MCP before building `seo-brand-radar`
+- [Phase 3]: Ahrefs Brand Radar endpoint name and response schema unverified — handled via runtime ToolSearch schema discovery in seo-brand-radar/SKILL.md (Step 1)
 - [Phase 3]: WebMCP connection status conflict — PROJECT.md says not connected, but expansion spec marks it connected; `seo-serp` and `seo-content-brief` must be designed with graceful Ahrefs-only fallback
 
 ## Session Continuity
 
 Last session: 2026-03-02
-Stopped at: Completed 02-04-PLAN.md — All 20 Phase 2 sub-skills deployed, routing table active, human checkpoint approved
+Stopped at: Completed 03-01-PLAN.md — seo-serp (Ahrefs-primary + WebMCP-optional) and seo-content-brief (inlined SERP + optional GSC overlay) created
 Resume file: None
