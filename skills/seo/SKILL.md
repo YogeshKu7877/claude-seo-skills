@@ -2,16 +2,15 @@
 name: seo
 description: >
   Comprehensive SEO analysis for any website or business type. Orchestrates 37 sub-skills
-  (32 active, 5 planned): full site audits, single-page analysis, technical SEO (CWV/INP),
-  schema markup, E-E-A-T content quality (Dec 2025 QRG), image optimization, sitemaps, GEO
-  for AI Overviews, ChatGPT, Perplexity, plus live Google Search Console and Ahrefs MCP data.
-  GSC commands: overview, drops, opportunities, brand-vs-nonbrand, cannibalization, compare,
-  content-decay, index-issues, new-keywords. Ahrefs: overview, backlinks, keywords, competitors,
-  content-gap, broken-links, new-links, anchor-analysis, dr-history, top-pages. Industry
-  detection for SaaS, e-commerce, local, publishers, agencies. Triggers on: "SEO", "audit",
-  "schema", "Core Web Vitals", "sitemap", "E-E-A-T", "AI Overviews", "GEO", "technical SEO",
-  "content quality", "page speed", "structured data", "GSC", "Ahrefs", "backlinks", "keywords",
-  "search console", "domain rating", "keyword rankings".
+  (37 active): full site audits, single-page analysis, technical SEO (CWV/INP), schema markup,
+  E-E-A-T content quality (Dec 2025 QRG), image optimization, sitemaps, GEO for AI Overviews,
+  ChatGPT, Perplexity, plus live GSC and Ahrefs MCP data. GSC: overview, drops, opportunities,
+  brand-vs-nonbrand, cannibalization, compare, content-decay, index-issues, new-keywords.
+  Ahrefs: overview, backlinks, keywords, competitors, content-gap, broken-links, new-links,
+  anchor-analysis, dr-history, top-pages. Cross-MCP: serp, content-brief, brand-radar,
+  site-audit-pro, report. Triggers on: "SEO", "audit", "schema", "Core Web Vitals", "sitemap",
+  "E-E-A-T", "AI Overviews", "GEO", "technical SEO", "content quality", "page speed",
+  "structured data", "GSC", "Ahrefs", "backlinks", "keywords", "search console", "domain rating".
 allowed-tools:
   - Read
   - Grep
@@ -24,7 +23,7 @@ allowed-tools:
 
 Comprehensive SEO analysis across all industries (SaaS, local services,
 e-commerce, publishers, agencies). Orchestrates 37 specialized sub-skills
-(32 active, 5 planned) and 6 subagents.
+(37 active) and 6 subagents.
 
 ## Quick Reference
 
@@ -70,15 +69,15 @@ e-commerce, publishers, agencies). Orchestrates 37 specialized sub-skills
 | `/seo ahrefs top-pages <domain>` | Top pages by organic traffic | active |
 | `/seo markdown-audit <path>` | Markdown SEO audit (no MCP needed) | active |
 
-### Phase 3 Commands (Multi-MCP)
+### Active Commands (Phase 3 — Cross-MCP)
 
 | Command | What it does | Status |
 |---------|-------------|--------|
-| `/seo serp <keyword>` | Live SERP analysis via Ahrefs + WebMCP | Phase 3 |
-| `/seo content-brief <keyword>` | AI content brief from SERP data | Phase 3 |
-| `/seo brand-radar <brand>` | AI search brand monitoring via Ahrefs Brand Radar | Phase 3 |
-| `/seo site-audit-pro <domain>` | Flagship multi-MCP audit (sequential wave architecture) | Phase 3 |
-| `/seo report <type> <domain>` | Automated report generation from available MCP data | Phase 3 |
+| `/seo serp <keyword>` | Live SERP analysis via Ahrefs + WebMCP | active |
+| `/seo content-brief <keyword>` | AI content brief from SERP data | active |
+| `/seo brand-radar <brand>` | AI search brand monitoring via Ahrefs Brand Radar | active |
+| `/seo site-audit-pro <domain>` | Flagship multi-MCP audit (sequential wave architecture) | active |
+| `/seo report <type> <domain>` | Automated report generation from available MCP data | active |
 
 ## Orchestration Logic
 
@@ -100,7 +99,7 @@ When the user invokes `/seo <command>`:
 1. Match against the routing table below
 2. If exact match with active command → load the sub-skill SKILL.md directly
 3. If group match (gsc, ahrefs) → extract sub-command and route to specific sub-skill via Level 2 routing
-4. If Phase 2+ command and sub-skill directory does not exist → return "Not Yet Available" message (see below)
+4. If command sub-skill directory does not exist → return "Not Yet Available" message (see below)
 5. If no match → suggest the closest command from the Quick Reference table
 
 ### Level 2: Sub-command Routing
@@ -168,26 +167,26 @@ Full mapping of all 37 commands to sub-skill directory names:
 | `/seo ahrefs dr-history` | `seo-ahrefs-dr-history/` | active |
 | `/seo ahrefs top-pages` | `seo-ahrefs-top-pages/` | active |
 | `/seo markdown-audit` | `seo-markdown-audit/` | active |
-| `/seo serp` | `seo-serp/` | Phase 3 |
-| `/seo content-brief` | `seo-content-brief/` | Phase 3 |
-| `/seo brand-radar` | `seo-brand-radar/` | Phase 3 |
-| `/seo site-audit-pro` | `seo-site-audit-pro/` | Phase 3 |
-| `/seo report` | `seo-report/` | Phase 3 |
+| `/seo serp` | `seo-serp/` | active |
+| `/seo content-brief` | `seo-content-brief/` | active |
+| `/seo brand-radar` | `seo-brand-radar/` | active |
+| `/seo site-audit-pro` | `seo-site-audit-pro/` | active |
+| `/seo report` | `seo-report/` | active |
 
 ### Unavailable Command Response
 
-If a command is marked as Phase 2+ and its sub-skill directory does not exist:
-1. Tell the user: "`[command]` is planned for [Phase N] and not yet available."
+If a command's sub-skill directory does not exist:
+1. Tell the user: "`[command]` is not yet available."
 2. Suggest an alternative from the active commands that provides partial value.
 3. Do NOT attempt to fabricate the functionality inline.
 
-Example response for unavailable command:
+Example response for unavailable command (Phase 4 and beyond):
 ```
-/seo serp is planned for Phase 3 and not yet available.
+/seo [command] is not yet available.
 
 While waiting, you can use:
-- `/seo ahrefs keywords <domain>` — organic keyword rankings via Ahrefs MCP
 - `/seo audit <url>` — full site audit using available static analysis
+- `/seo site-audit-pro <domain>` — comprehensive multi-MCP audit with live Ahrefs and GSC data
 ```
 
 ## Industry Detection
@@ -243,7 +242,7 @@ Weighted aggregate of all categories:
 
 ## Sub-Skills
 
-This skill orchestrates 37 specialized sub-skills (32 active, 5 planned):
+This skill orchestrates 37 specialized sub-skills (37 active):
 
 **Active (Phase 1 — Static Analysis):**
 1. **seo-audit** — Full website audit with parallel delegation
@@ -285,7 +284,7 @@ This skill orchestrates 37 specialized sub-skills (32 active, 5 planned):
 **Active (Phase 2 — Local/No MCP):**
 32. **seo-markdown-audit** — Markdown file SEO audit (no MCP needed)
 
-**Phase 3 (Multi-MCP — Planned):**
+**Active (Phase 3 — Cross-MCP):**
 33. **seo-serp** — Live SERP analysis
 34. **seo-content-brief** — AI content brief from SERP data
 35. **seo-brand-radar** — Brand monitoring via Ahrefs Brand Radar
