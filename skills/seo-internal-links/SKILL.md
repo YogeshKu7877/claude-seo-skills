@@ -11,6 +11,7 @@ allowed-tools:
   - Bash
   - Glob
   - WebFetch
+  - ToolSearch
 ---
 
 # Internal Link Audit

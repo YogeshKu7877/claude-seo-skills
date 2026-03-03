@@ -18,10 +18,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Original Commands (Enhanced)
 
-- [ ] **ORIG-01**: `/seo audit <url>` — Full website audit with parallel subagent delegation, health score 0-100
-- [ ] **ORIG-02**: `/seo page <url>` — Deep single-page analysis (on-page, content, technical, schema, images)
-- [ ] **ORIG-03**: `/seo technical <url>` — Technical SEO audit across 8 categories
-- [ ] **ORIG-04**: `/seo content <url>` — E-E-A-T and content quality analysis with AI citation readiness
+- [x] **ORIG-01**: `/seo audit <url>` — Full website audit with parallel subagent delegation, health score 0-100
+- [x] **ORIG-02**: `/seo page <url>` — Deep single-page analysis (on-page, content, technical, schema, images)
+- [x] **ORIG-03**: `/seo technical <url>` — Technical SEO audit across 8 categories
+- [x] **ORIG-04**: `/seo content <url>` — E-E-A-T and content quality analysis with AI citation readiness
 - [x] **ORIG-05**: `/seo schema <url>` — Schema.org detection, validation, and JSON-LD generation
 - [x] **ORIG-06**: `/seo images <url>` — Image optimization analysis (alt text, formats, lazy loading, CLS)
 - [x] **ORIG-07**: `/seo sitemap <url or generate>` — XML sitemap analysis or generation with industry templates
@@ -33,40 +33,40 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### GSC Commands (New)
 
-- [ ] **GSC-01**: `/seo gsc overview <site>` — Dashboard showing clicks, impressions, CTR, average position
-- [ ] **GSC-02**: `/seo gsc drops <site>` — Pages/keywords that lost traffic (28-day comparison)
-- [ ] **GSC-03**: `/seo gsc opportunities <site>` — High impressions + low CTR keywords (quick wins)
-- [ ] **GSC-04**: `/seo gsc cannibalization <site>` — Multiple pages ranking for same keyword detection
-- [ ] **GSC-05**: `/seo gsc index-issues <site>` — Pages not indexed with reasons
-- [ ] **GSC-06**: `/seo gsc compare <site>` — Period-over-period comparison
-- [ ] **GSC-07**: `/seo gsc brand-vs-nonbrand <site>` — Brand traffic split analysis
-- [ ] **GSC-08**: `/seo gsc content-decay <site>` — Pages losing rankings over 90 days
-- [ ] **GSC-09**: `/seo gsc new-keywords <site>` — Keywords you started ranking for recently
+- [x] **GSC-01**: `/seo gsc overview <site>` — Dashboard showing clicks, impressions, CTR, average position
+- [x] **GSC-02**: `/seo gsc drops <site>` — Pages/keywords that lost traffic (28-day comparison)
+- [x] **GSC-03**: `/seo gsc opportunities <site>` — High impressions + low CTR keywords (quick wins)
+- [x] **GSC-04**: `/seo gsc cannibalization <site>` — Multiple pages ranking for same keyword detection
+- [x] **GSC-05**: `/seo gsc index-issues <site>` — Pages not indexed with reasons
+- [x] **GSC-06**: `/seo gsc compare <site>` — Period-over-period comparison
+- [x] **GSC-07**: `/seo gsc brand-vs-nonbrand <site>` — Brand traffic split analysis
+- [x] **GSC-08**: `/seo gsc content-decay <site>` — Pages losing rankings over 90 days
+- [x] **GSC-09**: `/seo gsc new-keywords <site>` — Keywords you started ranking for recently
 
 ### Ahrefs Commands (New)
 
-- [ ] **AHRF-01**: `/seo ahrefs overview <domain>` — DR, backlinks, organic keywords, traffic estimate
-- [ ] **AHRF-02**: `/seo ahrefs backlinks <domain>` — Top backlinks with DR, anchor text, dofollow status
-- [ ] **AHRF-03**: `/seo ahrefs keywords <domain>` — Top organic keywords with position, volume, traffic
-- [ ] **AHRF-04**: `/seo ahrefs competitors <domain>` — Organic competitors with keyword overlap
-- [ ] **AHRF-05**: `/seo ahrefs content-gap <domain>` — Keywords competitors rank for that you don't
-- [ ] **AHRF-06**: `/seo ahrefs broken-links <domain>` — Broken backlinks for link reclamation
-- [ ] **AHRF-07**: `/seo ahrefs new-links <domain>` — Recently acquired/lost backlinks
-- [ ] **AHRF-08**: `/seo ahrefs anchor-analysis <domain>` — Anchor text distribution analysis
-- [ ] **AHRF-09**: `/seo ahrefs dr-history <domain>` — Domain rating trend over time
-- [ ] **AHRF-10**: `/seo ahrefs top-pages <domain>` — Best performing pages by traffic
+- [x] **AHRF-01**: `/seo ahrefs overview <domain>` — DR, backlinks, organic keywords, traffic estimate
+- [x] **AHRF-02**: `/seo ahrefs backlinks <domain>` — Top backlinks with DR, anchor text, dofollow status
+- [x] **AHRF-03**: `/seo ahrefs keywords <domain>` — Top organic keywords with position, volume, traffic
+- [x] **AHRF-04**: `/seo ahrefs competitors <domain>` — Organic competitors with keyword overlap
+- [x] **AHRF-05**: `/seo ahrefs content-gap <domain>` — Keywords competitors rank for that you don't
+- [x] **AHRF-06**: `/seo ahrefs broken-links <domain>` — Broken backlinks for link reclamation
+- [x] **AHRF-07**: `/seo ahrefs new-links <domain>` — Recently acquired/lost backlinks
+- [x] **AHRF-08**: `/seo ahrefs anchor-analysis <domain>` — Anchor text distribution analysis
+- [x] **AHRF-09**: `/seo ahrefs dr-history <domain>` — Domain rating trend over time
+- [x] **AHRF-10**: `/seo ahrefs top-pages <domain>` — Best performing pages by traffic
 
 ### Cross-MCP & Analysis Commands (New)
 
-- [ ] **CROSS-01**: `/seo serp <keyword>` — Live SERP analysis using Ahrefs SERP Overview + WebMCP crawling
-- [ ] **CROSS-02**: `/seo content-brief <keyword>` — AI content brief generated from SERP analysis
-- [ ] **CROSS-03**: `/seo brand-radar <brand>` — AI search brand monitoring via Ahrefs Brand Radar
+- [x] **CROSS-01**: `/seo serp <keyword>` — Live SERP analysis using Ahrefs SERP Overview + WebMCP crawling
+- [x] **CROSS-02**: `/seo content-brief <keyword>` — AI content brief generated from SERP analysis
+- [x] **CROSS-03**: `/seo brand-radar <brand>` — AI search brand monitoring via Ahrefs Brand Radar
 - [x] **CROSS-04**: `/seo site-audit-pro <domain>` — Flagship audit combining all MCPs with sequential wave execution
-- [ ] **CROSS-05**: `/seo report <type> <domain>` — Automated SEO report generation (monthly, weekly, audit, competitor)
+- [x] **CROSS-05**: `/seo report <type> <domain>` — Automated SEO report generation (monthly, weekly, audit, competitor)
 
 ### Local Analysis Commands (New)
 
-- [ ] **LOCAL-01**: `/seo markdown-audit <path>` — Audit markdown files for SEO before publishing (no MCP needed)
+- [x] **LOCAL-01**: `/seo markdown-audit <path>` — Audit markdown files for SEO before publishing (no MCP needed)
 - [x] **LOCAL-02**: `/seo log-analysis <file>` — Server log analysis for crawl patterns
 - [x] **LOCAL-03**: `/seo ai-content-check <url or file>` — AI content detection and authenticity optimization
 - [x] **LOCAL-04**: `/seo internal-links <domain>` — Internal link structure analysis and optimization
@@ -122,35 +122,35 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-04 | Phase 1 | Complete |
 | FOUND-05 | Phase 1 | Complete |
 | FOUND-06 | Phase 1 | Complete |
-| GSC-01 | Phase 2 → Phase 5 | Pending |
-| GSC-02 | Phase 2 → Phase 5 | Pending |
-| GSC-03 | Phase 2 → Phase 5 | Pending |
-| GSC-04 | Phase 2 → Phase 5 | Pending |
-| GSC-05 | Phase 2 → Phase 5 | Pending |
-| GSC-06 | Phase 2 → Phase 5 | Pending |
-| GSC-07 | Phase 2 → Phase 5 | Pending |
-| GSC-08 | Phase 2 → Phase 5 | Pending |
-| GSC-09 | Phase 2 → Phase 5 | Pending |
-| AHRF-01 | Phase 2 → Phase 5 | Pending |
-| AHRF-02 | Phase 2 → Phase 5 | Pending |
-| AHRF-03 | Phase 2 → Phase 5 | Pending |
-| AHRF-04 | Phase 2 → Phase 5 | Pending |
-| AHRF-05 | Phase 2 → Phase 5 | Pending |
-| AHRF-06 | Phase 2 → Phase 5 | Pending |
-| AHRF-07 | Phase 2 → Phase 5 | Pending |
-| AHRF-08 | Phase 2 → Phase 5 | Pending |
-| AHRF-09 | Phase 2 → Phase 5 | Pending |
-| AHRF-10 | Phase 2 → Phase 5 | Pending |
-| LOCAL-01 | Phase 2 → Phase 5 | Pending |
-| CROSS-01 | Phase 3 → Phase 5 | Pending |
-| CROSS-02 | Phase 3 → Phase 5 | Pending |
-| CROSS-03 | Phase 3 → Phase 5 | Pending |
+| GSC-01 | Phase 2 | Complete |
+| GSC-02 | Phase 2 | Complete |
+| GSC-03 | Phase 2 | Complete |
+| GSC-04 | Phase 2 | Complete |
+| GSC-05 | Phase 2 | Complete |
+| GSC-06 | Phase 2 | Complete |
+| GSC-07 | Phase 2 | Complete |
+| GSC-08 | Phase 2 | Complete |
+| GSC-09 | Phase 2 | Complete |
+| AHRF-01 | Phase 2 | Complete |
+| AHRF-02 | Phase 2 | Complete |
+| AHRF-03 | Phase 2 | Complete |
+| AHRF-04 | Phase 2 | Complete |
+| AHRF-05 | Phase 2 | Complete |
+| AHRF-06 | Phase 2 | Complete |
+| AHRF-07 | Phase 2 | Complete |
+| AHRF-08 | Phase 2 | Complete |
+| AHRF-09 | Phase 2 | Complete |
+| AHRF-10 | Phase 2 | Complete |
+| LOCAL-01 | Phase 2 | Complete |
+| CROSS-01 | Phase 3 | Complete |
+| CROSS-02 | Phase 3 | Complete |
+| CROSS-03 | Phase 3 | Complete |
 | CROSS-04 | Phase 3 | Complete |
-| CROSS-05 | Phase 3 → Phase 5 | Pending |
-| ORIG-01 | Phase 4 → Phase 5 | Pending |
-| ORIG-02 | Phase 4 → Phase 5 | Pending |
-| ORIG-03 | Phase 4 → Phase 5 | Pending |
-| ORIG-04 | Phase 4 → Phase 5 | Pending |
+| CROSS-05 | Phase 3 | Complete |
+| ORIG-01 | Phase 4 | Complete |
+| ORIG-02 | Phase 4 | Complete |
+| ORIG-03 | Phase 4 | Complete |
+| ORIG-04 | Phase 4 | Complete |
 | ORIG-05 | Phase 4 | Complete |
 | ORIG-06 | Phase 4 | Complete |
 | ORIG-07 | Phase 4 | Complete |
@@ -167,11 +167,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 **Coverage:**
 - v1 requirements: 48 total
-- Fully satisfied: 20 (Phase 1: 6, Phase 3: 1, Phase 4: 13)
-- Pending verification (Phase 5): 28
+- Fully satisfied: 48 (Phase 1: 6, Phase 2: 20, Phase 3: 5, Phase 4: 17)
+- Pending verification (Phase 5): 0
 - Mapped to phases: 48
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-02*
-*Last updated: 2026-03-03 — 28 partial requirements reset to Pending for Phase 5 gap closure*
+*Last updated: 2026-03-03 — Phase 5 complete, all 48 requirements fully satisfied*
