@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Internal planning
+.planning/
+seo-skill-expansion.md
+
+# OS / IDE
+.DS_Store
+.env
+.env.*
