@@ -16,6 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Core Live Data** - GSC commands (9), Ahrefs commands (10), and markdown-audit — the primary differentiators over static analysis (completed 2026-03-02)
 - [x] **Phase 3: Cross-MCP & Differentiating** - SERP analysis, content briefs, brand radar, site-audit-pro flagship, and automated reporting (completed 2026-03-02)
 - [x] **Phase 4: Enhanced Originals & Local Analysis** - Upgrade the 12 original commands with MCP overlays; add log analysis, AI content check, internal links, local SEO, and migration validation (completed 2026-03-02)
+- [ ] **Phase 5: Documentation & Verification Cleanup** - Close all 28 partial requirement gaps and 5 tech debt items identified by milestone audit
 
 ## Phase Details
 
@@ -83,14 +84,30 @@ Plans:
 **Plans:** 3/3 plans complete
 
 Plans:
-- [ ] 04-01-PLAN.md — Reference files (Google SEO Guide, Markdown Guide) + enhance seo-audit, seo-page, seo-technical, seo-content with MCP overlays (Wave 1)
-- [ ] 04-02-PLAN.md — Selective MCP overlays for schema/sitemap/geo, frontmatter refresh for remaining originals, markdown-audit Markdown Guide rules (Wave 1, parallel with 04-01)
-- [ ] 04-03-PLAN.md — 5 new local analysis sub-skills, routing table update to 42 commands, install.sh fix, smoke test, human verification (Wave 2)
+- [x] 04-01-PLAN.md — Reference files (Google SEO Guide, Markdown Guide) + enhance seo-audit, seo-page, seo-technical, seo-content with MCP overlays (Wave 1)
+- [x] 04-02-PLAN.md — Selective MCP overlays for schema/sitemap/geo, frontmatter refresh for remaining originals, markdown-audit Markdown Guide rules (Wave 1, parallel with 04-01)
+- [x] 04-03-PLAN.md — 5 new local analysis sub-skills, routing table update to 42 commands, install.sh fix, smoke test, human verification (Wave 2)
+
+### Phase 5: Documentation & Verification Cleanup
+**Goal**: Close all 28 partial requirement gaps (missing VERIFICATION.md and SUMMARY frontmatter entries) and 5 tech debt items identified by the v1.0 milestone audit — no implementation changes, only process/documentation fixes
+**Depends on**: Phase 4
+**Requirements**: GSC-01, GSC-02, GSC-03, GSC-04, GSC-05, GSC-06, GSC-07, GSC-08, GSC-09, AHRF-01, AHRF-02, AHRF-03, AHRF-04, AHRF-05, AHRF-06, AHRF-07, AHRF-08, AHRF-09, AHRF-10, LOCAL-01, CROSS-01, CROSS-02, CROSS-03, CROSS-05, ORIG-01, ORIG-02, ORIG-03, ORIG-04
+**Gap Closure:** Closes all gaps from v1.0-MILESTONE-AUDIT.md
+**Success Criteria** (what must be TRUE):
+  1. `02-VERIFICATION.md` exists and all 20 Phase 2 requirements pass formal verification
+  2. SUMMARY frontmatter `requirements_completed` lists are populated for 02-03, 03-01, 03-02, 04-01
+  3. `seo/SKILL.md` says "42 sub-skills" in all locations (not "27")
+  4. `seo-internal-links/SKILL.md` has ToolSearch in `allowed-tools` frontmatter
+  5. Re-running `/gsd:audit-milestone` shows 48/48 requirements fully satisfied with 0 gaps
+**Plans:** 0/1 plans complete
+
+Plans:
+- [ ] 05-01-PLAN.md — Run Phase 2 verifier, fix SUMMARY frontmatter, fix tech debt items (SKILL.md count, ToolSearch allowed-tools)
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -98,3 +115,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 2. Core Live Data | 4/4 | Complete   | 2026-03-02 |
 | 3. Cross-MCP & Differentiating | 3/3 | Complete   | 2026-03-02 |
 | 4. Enhanced Originals & Local Analysis | 3/3 | Complete   | 2026-03-02 |
+| 5. Docs & Verification Cleanup | 0/1 | Pending | — |

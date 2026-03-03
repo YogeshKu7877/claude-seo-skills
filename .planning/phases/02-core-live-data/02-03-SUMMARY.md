@@ -64,6 +64,7 @@ metrics:
   tasks_completed: 2
   files_created: 10
   files_modified: 0
+requirements-completed: [AHRF-01, AHRF-02, AHRF-03, AHRF-04, AHRF-05, AHRF-06, AHRF-07, AHRF-08, AHRF-09, AHRF-10]
 ---
 
 # Phase 2 Plan 03: Ahrefs Sub-Skills Summary

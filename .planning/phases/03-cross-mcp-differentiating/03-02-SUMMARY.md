@@ -37,6 +37,7 @@ metrics:
   tasks_total: 2
   files_created: 2
   files_modified: 0
+requirements_completed: [CROSS-03, CROSS-05]
 ---
 
 # Phase 3 Plan 02: Brand Radar and Report Generator Summary

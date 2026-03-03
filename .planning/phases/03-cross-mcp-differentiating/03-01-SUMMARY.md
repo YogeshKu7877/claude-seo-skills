@@ -27,6 +27,7 @@ metrics:
   tasks_completed: 2
   files_created: 2
   files_modified: 1
+requirements_completed: [CROSS-01, CROSS-02]
 ---
 
 # Phase 3 Plan 01: seo-serp and seo-content-brief Sub-Skills Summary
