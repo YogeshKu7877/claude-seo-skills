@@ -219,9 +219,24 @@ claude-seo-skills/
 │   └── ...                    # 41 more skill directories
 ├── agents/                    # 6 specialist agents for parallel audits
 ├── scripts/                   # Install, smoke test, MCP verification
-├── install.sh                 # One-command installer
+├── desktop/                   # Claude Desktop / Claude.ai web edition
+│   ├── PROJECT-INSTRUCTIONS.md  # Paste into Project custom instructions
+│   ├── knowledge/               # Upload as project knowledge files
+│   └── README.md                # Desktop setup guide
+├── install.sh                 # One-command installer (Claude Code)
 └── CLAUDE.md                  # Project context for Claude Code
 ```
+
+## Claude Desktop / Claude.ai Web
+
+Don't use Claude Code? You can use these SEO skills in **Claude Desktop** or **Claude.ai web** via Projects.
+
+See [`desktop/README.md`](desktop/README.md) for setup — takes 2 minutes:
+1. Create a Project, paste the system prompt
+2. Upload the reference guides as knowledge files
+3. Start chatting with SEO commands
+
+> Desktop edition is conversational (no shell/agents), but gives you the same SEO analysis, reference knowledge, and MCP data access.
 
 ## Contributing
 
