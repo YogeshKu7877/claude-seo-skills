@@ -18,7 +18,21 @@
 - **Parallel execution** — site audits delegate to 6 specialist agents for speed
 - **Graceful MCP degradation** — works with whatever MCP servers you have connected; skips what's missing
 
-## Quick Start
+## Installation
+
+### Via Plugin Marketplace (recommended)
+
+```bash
+# Add the marketplace
+/plugin marketplace add lionkiii/claude-seo-skills
+
+# Install the plugin
+/plugin install claude-seo-skills@lionkiii-seo
+```
+
+After installing, all commands are available as `/claude-seo-skills:seo`, or use the orchestrator skill which auto-activates when you ask about SEO topics.
+
+### Manual Installation
 
 ```bash
 git clone https://github.com/lionkiii/claude-seo-skills.git
@@ -26,13 +40,13 @@ cd claude-seo-skills
 bash install.sh
 ```
 
-That's it. The installer copies skills and agents to `~/.claude/`, sets up a Python venv, and verifies MCP connections. Run `bash scripts/smoke-test.sh` to verify everything works.
+The installer copies skills and agents to `~/.claude/`, sets up a Python venv, and verifies MCP connections. Run `bash scripts/smoke-test.sh` to verify everything works.
 
 ### Prerequisites
 
 | Requirement | Required | Notes |
 |---|---|---|
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Yes | Anthropic's CLI tool |
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) v1.0.33+ | Yes | Anthropic's CLI tool |
 | Python 3.9+ | Yes | For helper scripts |
 | Ahrefs MCP | Yes | Auto-connected via Claude.ai — no setup needed |
 | [GSC MCP](https://github.com/lionkiii/google-searchconsole-mcp) | Optional | For Google Search Console commands ([setup guide](#google-search-console-mcp-optional)) |
@@ -207,6 +221,9 @@ Without GSC, all 35 non-GSC commands work perfectly. The 9 GSC commands will sho
 
 ```
 claude-seo-skills/
+├── .claude-plugin/
+│   ├── plugin.json            # Plugin metadata
+│   └── marketplace.json       # Self-hosted marketplace catalog
 ├── skills/                    # 44 skill definitions
 │   ├── seo/                   # Orchestrator + shared references
 │   │   ├── SKILL.md           # Main /seo command router
@@ -224,6 +241,7 @@ claude-seo-skills/
 │   ├── knowledge/               # Upload as project knowledge files
 │   └── README.md                # Desktop setup guide
 ├── install.sh                 # One-command installer (Claude Code)
+├── PRIVACY.md                 # Privacy policy
 └── CLAUDE.md                  # Project context for Claude Code
 ```
 
@@ -246,11 +264,17 @@ See [`desktop/README.md`](desktop/README.md) for setup — takes 2 minutes:
 4. Run `bash scripts/smoke-test.sh` to validate (142 checks)
 5. Open a PR
 
+## Privacy
+
+This plugin does not collect, transmit, or store any user data. All commands run locally within Claude Code. See [PRIVACY.md](PRIVACY.md) for details.
+
 ## Related Projects
 
 - [google-searchconsole-mcp](https://github.com/lionkiii/google-searchconsole-mcp) — Google Search Console MCP server for Claude Code
+- [rss-feeds-mcp](https://github.com/lionkiii/rss-feeds-mcp) — RSS blog feed monitoring for Claude Code
+- [gads-transparency-mcp](https://github.com/lionkiii/gads-transparency-mcp) — Google Ads Transparency Center for Claude Code
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) — Anthropic's CLI tool
-- [Claude Code Skills Docs](https://docs.anthropic.com/en/docs/claude-code/skills) — How skills work
+- [Claude Code Plugins Docs](https://code.claude.com/docs/en/plugins) — How plugins work
 
 ## License
 
